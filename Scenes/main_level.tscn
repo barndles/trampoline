@@ -10,7 +10,7 @@ size = Vector2(219.5, 666)
 [node name="Main_Level" type="Node2D"]
 
 [node name="building_base" parent="." instance=ExtResource("1_r6bca")]
-position = Vector2(915, 518)
+position = Vector2(872.33, 583.405)
 
 [node name="Player" parent="." instance=ExtResource("1_3kmge")]
 position = Vector2(198, 583)
