@@ -43,6 +43,7 @@ func _process(delta):
 func _physics_process(delta):
 	if (fallingObject.linear_velocity.y > 0):
 		animatedSprite.play("Falling")
+		$Boing.play()
 	if (fallingObject.position.y > trampolineHeight) and canBounce:
 		bouncing = true
 		canBounce = false

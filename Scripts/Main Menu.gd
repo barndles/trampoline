@@ -11,6 +11,9 @@ func _ready():
 func _process(delta):
 	pass
 
+func _input(event):
+	if event.is_action_pressed("quit"):
+		get_tree().quit() 
 
 func _on_start_game_pressed():
 	$VBoxContainer/Starting.play()
