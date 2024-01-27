@@ -8,6 +8,3 @@ script = ExtResource("1_c5oa4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_2mln3")
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
