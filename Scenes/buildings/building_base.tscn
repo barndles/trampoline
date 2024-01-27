@@ -1,7 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://bu8g1eahap64k"]
+[gd_scene load_steps=8 format=3 uid="uid://bu8g1eahap64k"]
 
 [ext_resource type="Script" path="res://Scripts/building_scripts/building_builder.gd" id="1_dmg20"]
 [ext_resource type="Texture2D" uid="uid://cbph62beotpck" path="res://Sprites/Images/building_base.PNG" id="2_i6mw4"]
+[ext_resource type="Texture2D" uid="uid://bwu7bckcr81is" path="res://Sprites/Images/Fire.png" id="3_2vlwv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jaylc"]
+atlas = ExtResource("3_2vlwv")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iriwq"]
+atlas = ExtResource("3_2vlwv")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3gjkk"]
+atlas = ExtResource("3_2vlwv")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cfvj8"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jaylc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iriwq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3gjkk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="building_base" type="Node2D"]
 script = ExtResource("1_dmg20")
@@ -9,3 +40,17 @@ script = ExtResource("1_dmg20")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
 texture = ExtResource("2_i6mw4")
+
+[node name="Fire_Left" type="AnimatedSprite2D" parent="."]
+position = Vector2(-128, 45)
+scale = Vector2(1.71875, 1.71875)
+sprite_frames = SubResource("SpriteFrames_cfvj8")
+autoplay = "default"
+frame_progress = 0.196991
+
+[node name="Fire_Right" type="AnimatedSprite2D" parent="."]
+position = Vector2(128, 45)
+scale = Vector2(1.71875, 1.71875)
+sprite_frames = SubResource("SpriteFrames_cfvj8")
+autoplay = "default"
+frame_progress = 0.110923
