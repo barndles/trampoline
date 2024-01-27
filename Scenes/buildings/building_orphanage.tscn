@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2ads04j5044"]
+
+[ext_resource type="Texture2D" uid="uid://dmt0edhf7l0wo" path="res://Sprites/icon.svg" id="1_2mln3"]
+
+[node name="BuildingOrphanage" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -11.25)
+scale = Vector2(0.195313, 0.386719)
+texture = ExtResource("1_2mln3")
+offset = Vector2(0, -97.56)

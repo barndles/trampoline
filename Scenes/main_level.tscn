@@ -1,12 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdd4crv7gyydl"]
+[gd_scene load_steps=5 format=3 uid="uid://cdd4crv7gyydl"]
 
 [ext_resource type="PackedScene" uid="uid://c4wayj2esb4on" path="res://Scenes/player1.tscn" id="1_3kmge"]
+[ext_resource type="PackedScene" uid="uid://bu8g1eahap64k" path="res://Scenes/buildings/building_base.tscn" id="1_r6bca"]
 [ext_resource type="PackedScene" uid="uid://0mchb1mnuemn" path="res://Scenes/falling_object.tscn" id="2_xtc7r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dc8k6"]
 size = Vector2(219.5, 666)
 
 [node name="Main_Level" type="Node2D"]
+
+[node name="building_base" parent="." instance=ExtResource("1_r6bca")]
+position = Vector2(330, 403)
 
 [node name="Player" parent="." instance=ExtResource("1_3kmge")]
 position = Vector2(198, 583)
