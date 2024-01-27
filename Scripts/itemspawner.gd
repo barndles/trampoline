@@ -1,7 +1,7 @@
 extends Node
 
 var thrown_object = preload("res://Scenes/falling_object.tscn")
-var spawn_points = [Vector2(831,327),Vector2(959,327),Vector2(1087,327),Vector2(831,150),Vector2(959,150),Vector2(1087,150)]
+var spawn_points = [Vector2(831,307),Vector2(959,307),Vector2(1087,307),Vector2(831,130),Vector2(959,130),Vector2(1087,130)]
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	inst(spawn_points[0])
