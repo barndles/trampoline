@@ -26,5 +26,5 @@ position = Vector2(1169, 326)
 shape = SubResource("RectangleShape2D_dc8k6")
 
 [node name="FallingObject" parent="." instance=ExtResource("2_xtc7r")]
-position = Vector2(815, 124)
+position = Vector2(872, 128)
 gravity_scale = 1.0
