@@ -7,7 +7,8 @@ func _ready():
 	wait_seconds_to_spawn()
 
 func wait_seconds_to_spawn():
-	await get_tree().create_timer(5.0).timeout
+	var rng_time = randf_range(3.0,8.0)
+	await get_tree().create_timer(rng_time).timeout
 	inst(Vector2(872.33,200))
 	wait_seconds_to_spawn()
 

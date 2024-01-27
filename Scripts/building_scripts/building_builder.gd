@@ -7,8 +7,7 @@ var babySpawn = preload("res://Scenes/falling_object.tscn")
 var rng = RandomNumberGenerator.new()
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var random_num = rng.randi_range(1,3)
-	for n in random_num:
+	for n in 3:
 		inst(Vector2(0,((n+1) * (-buildingSprite.texture.get_height()))))
 
 func inst(pos):
@@ -17,3 +16,4 @@ func inst(pos):
 	var instance = floor_select.instantiate();
 	instance.position = pos
 	add_child(instance)
+	move_child(instance, 0)
