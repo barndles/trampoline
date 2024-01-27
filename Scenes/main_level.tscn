@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cdd4crv7gyydl"]
+[gd_scene load_steps=10 format=3 uid="uid://cdd4crv7gyydl"]
 
 [ext_resource type="PackedScene" uid="uid://c4wayj2esb4on" path="res://Scenes/player1.tscn" id="1_3kmge"]
 [ext_resource type="PackedScene" uid="uid://bu8g1eahap64k" path="res://Scenes/buildings/building_base.tscn" id="1_r6bca"]
@@ -10,6 +10,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dc8k6"]
 size = Vector2(219.5, 666)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1740e"]
+size = Vector2(1162, 38)
 
 [node name="Main_Level" type="Node2D"]
 
@@ -87,3 +90,10 @@ z_index = -1
 position = Vector2(96, 539)
 scale = Vector2(3, 3)
 texture = ExtResource("5_bqveu")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(575, 635)
+shape = SubResource("RectangleShape2D_1740e")
