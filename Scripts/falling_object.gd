@@ -40,6 +40,9 @@ func _process(delta):
 	
 	# compute bounce angle 
 	bounceAngle.x = ((0 - distanceToP1) + distanceToP2) * trampolineTightness
+	
+	#baby landing (badly)
+	#if(fallingObject)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -64,5 +67,21 @@ func _physics_process(delta):
 	#TEMPORARY SCENE RELOAD - DEBUGGING ONLY - SPACEBAR
 	if Input.is_action_just_pressed("ui_accept"):
 		get_tree().reload_current_scene()
+<<<<<<< Updated upstream
 		
 
+=======
+
+func _integrate_forces(state):
+	# I don't remember if the state transform is local or global. I assumed local
+	# for now, but you may need to change these to global variables.
+	
+	# Store the rotation we want to keep
+	var current_rotation = rotation;
+	# Set our transform to the state's transform
+	transform = state.transform
+	# Undo rotation
+	rotation = current_rotation
+	# Set the state's transform to the current transform
+	state.transform = transform
+>>>>>>> Stashed changes
