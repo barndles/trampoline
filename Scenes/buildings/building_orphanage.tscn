@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d2ads04j5044"]
 
-[ext_resource type="Texture2D" uid="uid://dmt0edhf7l0wo" path="res://Sprites/icon.svg" id="1_2mln3"]
+[ext_resource type="Texture2D" uid="uid://dmt0edhf7l0wo" path="res://Sprites/Images/icon.svg" id="1_2mln3"]
 
 [node name="BuildingOrphanage" type="Node2D"]
 

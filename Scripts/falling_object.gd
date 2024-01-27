@@ -15,6 +15,7 @@ var gravity = 0.98
 
 var bouncing = false
 var canBounce = false
+@onready var animatedSprite = $Sprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,7 +29,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	
+	if (fallingObject.linear_velocity.y > 0):
+		animatedSprite.play("Falling")
 	if (fallingObject.position.y > trampolineHeight) and canBounce:
 		bouncing = true
 		canBounce = false

@@ -13,7 +13,7 @@ config_version=5
 config/name="Trampoline"
 run/main_scene="res://Scenes/Menus/Main Menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://Sprites/icon.svg"
+config/icon="res://Sprites/Images/icon.svg"
 
 [input]
 
@@ -43,3 +43,7 @@ p2_right={
 2d_physics/layer_1="Players"
 2d_physics/layer_2="Falling Objects"
 2d_physics/layer_3="Buildings"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
