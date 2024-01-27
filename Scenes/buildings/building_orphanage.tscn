@@ -5,7 +5,5 @@
 [node name="BuildingOrphanage" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -11.25)
-scale = Vector2(0.195313, 0.386719)
+scale = Vector2(4, 2)
 texture = ExtResource("1_2mln3")
-offset = Vector2(0, -97.56)
