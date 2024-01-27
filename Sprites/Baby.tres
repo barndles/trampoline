@@ -1,6 +1,47 @@
-[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://6dwd72sedqj4"]
+[gd_resource type="SpriteFrames" load_steps=15 format=3 uid="uid://6dwd72sedqj4"]
 
 [ext_resource type="Texture2D" uid="uid://cmtd571gcpr2s" path="res://Sprites/Images/Baby_falling.png" id="1_r7ixe"]
+[ext_resource type="Texture2D" uid="uid://dbcv8xe3jh28r" path="res://Sprites/Images/Baby_crash.png" id="1_y764n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5lgsy"]
+atlas = ExtResource("1_y764n")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cgxq4"]
+atlas = ExtResource("1_y764n")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7l6p"]
+atlas = ExtResource("1_y764n")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o185q"]
+atlas = ExtResource("1_y764n")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clrlx"]
+atlas = ExtResource("1_y764n")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1bhg"]
+atlas = ExtResource("1_y764n")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3dq85"]
+atlas = ExtResource("1_y764n")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3gc0"]
+atlas = ExtResource("1_y764n")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6867v"]
+atlas = ExtResource("1_y764n")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpdu7"]
+atlas = ExtResource("1_y764n")
+region = Rect2(16, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_03u5g"]
 atlas = ExtResource("1_r7ixe")
@@ -12,6 +53,41 @@ region = Rect2(16, 0, 16, 16)
 
 [resource]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5lgsy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cgxq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7l6p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o185q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clrlx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1bhg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3dq85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3gc0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6867v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpdu7")
+}],
+"loop": true,
+"name": &"Baby_Crash",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_03u5g")
