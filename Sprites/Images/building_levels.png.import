@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://ncyt5sboh75q"
-=======
-uid="uid://d0kceuhqxtkvb"
->>>>>>> 30b3ecfbc1d1e280e79f0b3b2a6c58691c3c8d68
-path="res://.godot/imported/signs.png-0a9f37dce02f1bfaf4a418e98e587c4e.ctex"
+uid="uid://c2yd86ln1b5ir"
+path="res://.godot/imported/building_levels.png-fe707b3741a416f949b71a34ffb8a46c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Images/signs.png"
-dest_files=["res://.godot/imported/signs.png-0a9f37dce02f1bfaf4a418e98e587c4e.ctex"]
+source_file="res://Sprites/Images/building_levels.png"
+dest_files=["res://.godot/imported/building_levels.png-fe707b3741a416f949b71a34ffb8a46c.ctex"]
 
 [params]
 

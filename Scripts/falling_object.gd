@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var fallingObject = $"."
+@onready var fallingObject = self
 @onready var col = $CollisionShape2D
 var trampolineHeight
 
@@ -42,7 +42,7 @@ func _process(delta):
 	#if(fallingObject)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
+
 	if (fallingObject.linear_velocity.y > 0):
 		animatedSprite.play("Falling")
 	if (fallingObject.position.y > trampolineHeight) and canBounce:
