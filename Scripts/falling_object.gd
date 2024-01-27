@@ -1,5 +1,6 @@
 extends Node2D
 
+var lives = 5
 @onready var fallingObject = self
 @onready var col = $CollisionShape2D
 var trampolineHeight
@@ -21,6 +22,7 @@ var distanceToP1
 var distanceToP2
 var trampolineTightness
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	trampolineHeight = player1.global_position.y #set base bounce height
@@ -28,6 +30,7 @@ func _ready():
 	randomVectorInRange = Vector2(((random.randf()* .5) + 0.25) * -1, ((random.randf()* .5) + 0.25) * -1) #random (0.25-0.75, 0.25-0.75) vector mirrored on each axis
 	print(randomVectorInRange)
 	fallingObject.apply_impulse(randomVectorInRange * impulseMultiplier)
+	
 	
 
 func _process(delta):
@@ -56,7 +59,7 @@ func _physics_process(delta):
 		else: canBounce = false
 	if (bouncing == true and canBounce == false):
 		$Boing.play()
-	
+		
 
 	
 	
@@ -69,7 +72,13 @@ func _physics_process(delta):
 
 
 func _on_body_entered(body):
+	print(lives)
+	lives = lives - 1
 	print("ouch")
 	animatedSprite.play("Crash")
 	fallingObject.sleeping = true
+	print(lives)
+	
+	if (lives <= 0):
+		get_tree().quit()
 
