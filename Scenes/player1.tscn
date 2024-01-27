@@ -12,7 +12,8 @@ script = ExtResource("1_tlkj6")
 
 [node name="blanket" type="Line2D" parent="."]
 points = PackedVector2Array(0, 0, 0, 0)
-default_color = Color(0.85098, 0, 0.211765, 1)
+width = 5.0
+default_color = Color(0.207843, 0.184314, 0.160784, 1)
 script = ExtResource("2_5x5hb")
 
 [node name="player1" type="CharacterBody2D" parent="."]

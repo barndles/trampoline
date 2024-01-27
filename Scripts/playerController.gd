@@ -6,8 +6,8 @@ extends Node2D
 var p1v = Vector2()
 var p2v = Vector2()
 
-var p1speed = 1.5
-var p2speed = 1.5
+var p1speed = 2
+var p2speed = 2
 
 var friction = 0.8
 var distance
@@ -24,7 +24,8 @@ func _process(delta):
 	pass
 
 func _physics_process(delta):
-	distance = abs(player2.position.x - player1.position.x) * 0.005
+	distance = abs(player2.position.x - player1.position.x)* 0.0075
+	if distance < 1: distance = 0
 	#player1
 	p1v += Vector2(Input.get_axis("p1_left", "p1_right") * p1speed, 0)
 	p1v += Vector2(distance, 0)
