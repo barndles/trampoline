@@ -42,7 +42,7 @@ func _process(delta):
 	#if(fallingObject)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-
+func _physics_process(delta):
 	if (fallingObject.linear_velocity.y > 0):
 		animatedSprite.play("Falling")
 	if (fallingObject.position.y > trampolineHeight) and canBounce:
@@ -56,7 +56,7 @@ func _process(delta):
 		else: canBounce = false
 	if (bouncing == true and canBounce == false):
 		$Boing.play()
-
+	
 
 	
 	
@@ -65,4 +65,11 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		get_tree().reload_current_scene()
 
+
+
+
+func _on_body_entered(body):
+	print("ouch")
+	animatedSprite.play("Crash")
+	fallingObject.sleeping = true
 

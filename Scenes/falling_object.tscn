@@ -10,14 +10,15 @@ size = Vector2(48, 45.5)
 
 [node name="FallingObject" type="RigidBody2D"]
 collision_layer = 2
-collision_mask = 0
-gravity_scale = 0.3
+collision_mask = 8
+max_contacts_reported = 1
+contact_monitor = true
 script = ExtResource("1_oxqbh")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("2_y6bm0")
-animation = &"Falling"
+animation = &"Crash"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1.25)
@@ -28,3 +29,6 @@ stream = ExtResource("3_ooe1e")
 
 [node name="Boing" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_smksa")
+volume_db = 2.6
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

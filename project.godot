@@ -52,6 +52,7 @@ quit={
 2d_physics/layer_1="Players"
 2d_physics/layer_2="Falling Objects"
 2d_physics/layer_3="Buildings"
+2d_physics/layer_4="Ground"
 
 [rendering]
 
