@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://0mchb1mnuemn"]
+
+[ext_resource type="Script" path="res://Scripts/falling_object.gd" id="1_oxqbh"]
+[ext_resource type="Texture2D" uid="uid://dmt0edhf7l0wo" path="res://Sprites/icon.svg" id="1_yxuh2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_isqrd"]
+size = Vector2(30, 30)
+
+[node name="FallingObject" type="Node2D"]
+script = ExtResource("1_oxqbh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.2, 0.14902, 1)
+scale = Vector2(0.22952, 0.22952)
+texture = ExtResource("1_yxuh2")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("RectangleShape2D_isqrd")
