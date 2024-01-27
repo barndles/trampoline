@@ -15,7 +15,12 @@ var gravity = 0.98
 
 var bouncing = false
 var canBounce = false
+var bounceAngle = Vector2()
 @onready var animatedSprite = $Sprite2D
+
+var distanceToP1
+var distanceToP2
+var trampolineTightness
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,8 +29,15 @@ func _ready():
 	randomVectorInRange = Vector2(((random.randf()* .5) + 0.25) * -1, ((random.randf()* .5) + 0.25) * -1) #random (0.25-0.75, 0.25-0.75) vector mirrored on each axis
 	print(randomVectorInRange)
 	fallingObject.apply_impulse(randomVectorInRange * impulseMultiplier)
+	
 
-
+func _process(delta):
+	distanceToP1 = abs(fallingObject.position.x - player1.global_position.x) # we only care about the distance on the x axis, so we can just subtract :)
+	distanceToP2 = abs(fallingObject.position.x - player2.global_position.x)
+	trampolineTightness = abs(player2.global_position.x - player1.global_position.x)/100# tightness is just a matter of how far the players are apart
+	
+	# compute bounce angle 
+	bounceAngle.x = ((0 - distanceToP1) + distanceToP2) * trampolineTightness
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -34,8 +46,8 @@ func _physics_process(delta):
 	if (fallingObject.position.y > trampolineHeight) and canBounce:
 		bouncing = true
 		canBounce = false
-		fallingObject.linear_velocity = Vector2(fallingObject.linear_velocity.x, 0)
-		fallingObject.apply_impulse(Vector2(0,-1000))
+		fallingObject.linear_velocity = Vector2(0, 0)
+		fallingObject.apply_impulse(Vector2(bounceAngle.x, -1000))
 	if (fallingObject.position.y < trampolineHeight):
 		if (fallingObject.position.x > player1.global_position.x) and (fallingObject.position.x < player2.global_position.x):
 			canBounce = true
