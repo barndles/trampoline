@@ -1,12 +1,12 @@
 [gd_scene load_steps=2 format=3 uid="uid://bcv4vploituyn"]
 
-[ext_resource type="Texture2D" uid="uid://dv5vwebe2bhb8" path="res://Sprites/Images/building_f1_alt.PNG" id="1_3wx4g"]
+[ext_resource type="Texture2D" uid="uid://dj0xno3p55g2n" path="res://Sprites/Images/building_f1.PNG" id="1_gpbc6"]
 
 [node name="OldHome" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
-texture = ExtResource("1_3wx4g")
+texture = ExtResource("1_gpbc6")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0

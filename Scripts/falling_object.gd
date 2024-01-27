@@ -29,8 +29,6 @@ func _ready():
 	print(randomVectorInRange)
 	fallingObject.apply_impulse(randomVectorInRange * impulseMultiplier)
 	
-	# set as random good object
-	
 
 func _process(delta):
 	distanceToP1 = abs(fallingObject.position.x - player1.global_position.x) # we only care about the distance on the x axis, so we can just subtract :)
