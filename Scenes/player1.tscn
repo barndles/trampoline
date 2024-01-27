@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c4wayj2esb4on"]
+[gd_scene load_steps=5 format=3 uid="uid://c0h0fkmf78opb"]
 
 [ext_resource type="Script" path="res://Scripts/playerController.gd" id="1_tlkj6"]
 [ext_resource type="Script" path="res://Scripts/Blanket.gd" id="2_5x5hb"]
