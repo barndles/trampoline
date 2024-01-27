@@ -25,13 +25,9 @@ var trampolineTightness
 func _ready():
 	trampolineHeight = player1.global_position.y #set base bounce height
 	
-	
-	
 	randomVectorInRange = Vector2(((random.randf()* .5) + 0.25) * -1, ((random.randf()* .5) + 0.25) * -1) #random (0.25-0.75, 0.25-0.75) vector mirrored on each axis
 	print(randomVectorInRange)
 	fallingObject.apply_impulse(randomVectorInRange * impulseMultiplier)
-	
-
 	
 
 func _process(delta):
@@ -69,17 +65,4 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		get_tree().reload_current_scene()
 
-
-func _integrate_forces(state):
-	# I don't remember if the state transform is local or global. I assumed local
-	# for now, but you may need to change these to global variables.
-	
-	# Store the rotation we want to keep
-	var current_rotation = rotation;
-	# Set our transform to the state's transform
-	transform = state.transform
-	# Undo rotation
-	rotation = current_rotation
-	# Set the state's transform to the current transform
-	state.transform = transform
 
