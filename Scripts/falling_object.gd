@@ -57,12 +57,6 @@ func _physics_process(delta):
 		if (fallingObject.position.x > player1.global_position.x) and (fallingObject.position.x < player2.global_position.x):
 			canBounce = true
 		else: canBounce = false
-	if (bouncing == true and canBounce == false):
-		$Boing.play()
-		
-
-	
-	
 	
 	#TEMPORARY SCENE RELOAD - DEBUGGING ONLY - SPACEBAR
 	if Input.is_action_just_pressed("ui_accept"):
@@ -72,13 +66,7 @@ func _physics_process(delta):
 
 
 func _on_body_entered(body):
-	print(lives)
-	lives = lives - 1
 	print("ouch")
 	animatedSprite.play("Crash")
 	fallingObject.sleeping = true
-	print(lives)
-	
-	if (lives <= 0):
-		get_tree().quit()
 
