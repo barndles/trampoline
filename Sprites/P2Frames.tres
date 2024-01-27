@@ -20,6 +20,11 @@ animations = [{
 "name": &"idle",
 "speed": 5.0
 }, {
+"frames": [],
+"loop": true,
+"name": &"idle_lookup",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8kxuu")
@@ -29,5 +34,10 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk_lookup",
 "speed": 5.0
 }]
