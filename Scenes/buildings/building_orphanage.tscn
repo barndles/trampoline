@@ -1,13 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2ads04j5044"]
+[gd_scene load_steps=2 format=3 uid="uid://d2ads04j5044"]
 
-[ext_resource type="Script" path="res://Scripts/itemspawner.gd" id="1_c5oa4"]
-[ext_resource type="Texture2D" uid="uid://dv5vwebe2bhb8" path="res://Sprites/Images/building_f1_alt.PNG" id="2_04dbx"]
+[ext_resource type="Texture2D" uid="uid://dj0xno3p55g2n" path="res://Sprites/Images/building_f1.PNG" id="1_mjpfy"]
 
 [node name="BuildingOrphanage" type="Node2D"]
-script = ExtResource("1_c5oa4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_04dbx")
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+scale = Vector2(2, 2)
+texture = ExtResource("1_mjpfy")
