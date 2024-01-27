@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bmv8jxmmk3yvi"]
+[gd_scene load_steps=4 format=3 uid="uid://bmv8jxmmk3yvi"]
 
-[ext_resource type="Script" path="res://Scenes/Main Menu.gd" id="1_oagu1"]
+[ext_resource type="Script" path="res://Scripts/Main Menu.gd" id="1_c838t"]
+[ext_resource type="AudioStream" uid="uid://cc5hs7ta51vff" path="res://Sounds/TITLE_SCREEN.wav" id="2_4bo8c"]
+[ext_resource type="AudioStream" uid="uid://dnjy1a3c0scci" path="res://Sounds/Help_SFX.wav" id="2_awbx6"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -9,7 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_oagu1")
+script = ExtResource("1_c838t")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -29,9 +31,21 @@ grow_vertical = 2
 layout_mode = 2
 text = "Start Game"
 
+[node name="Settings" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Quit Game"
 
+[node name="Starting" type="AudioStreamPlayer" parent="VBoxContainer"]
+stream = ExtResource("2_awbx6")
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_4bo8c")
+autoplay = true
+
 [connection signal="pressed" from="VBoxContainer/Start Game" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
