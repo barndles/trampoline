@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cdd4crv7gyydl"]
+[gd_scene load_steps=6 format=3 uid="uid://cdd4crv7gyydl"]
 
 [ext_resource type="PackedScene" uid="uid://c4wayj2esb4on" path="res://Scenes/player1.tscn" id="1_3kmge"]
 [ext_resource type="PackedScene" uid="uid://bu8g1eahap64k" path="res://Scenes/buildings/building_base.tscn" id="1_r6bca"]
-[ext_resource type="PackedScene" uid="uid://0mchb1mnuemn" path="res://Scenes/falling_object.tscn" id="2_xtc7r"]
 [ext_resource type="Script" path="res://Scripts/itemspawner.gd" id="3_ofqxm"]
 [ext_resource type="AudioStream" uid="uid://divm4ibuptpnk" path="res://Sounds/CATCH_CATCH_CATCH.wav" id="4_s38mv"]
 
@@ -29,10 +28,6 @@ shape = SubResource("RectangleShape2D_dc8k6")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(1169, 326)
 shape = SubResource("RectangleShape2D_dc8k6")
-
-[node name="FallingObject" parent="." instance=ExtResource("2_xtc7r")]
-position = Vector2(872, 128)
-gravity_scale = 1.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_s38mv")
