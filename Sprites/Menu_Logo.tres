@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://buqjocgnl5ys"]
+
+[ext_resource type="Texture2D" uid="uid://c8barvr7rnhwf" path="res://Sprites/Images/K-9 catchers logo.png" id="1_bmm7i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbjt1"]
+atlas = ExtResource("1_bmm7i")
+region = Rect2(0, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gl16l"]
+atlas = ExtResource("1_bmm7i")
+region = Rect2(128, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4mvyc"]
+atlas = ExtResource("1_bmm7i")
+region = Rect2(256, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ouixq"]
+atlas = ExtResource("1_bmm7i")
+region = Rect2(384, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bb1l"]
+atlas = ExtResource("1_bmm7i")
+region = Rect2(512, 0, 128, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbjt1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gl16l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4mvyc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ouixq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4bb1l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmv8jxmmk3yvi"]
+[gd_scene load_steps=6 format=3 uid="uid://bmv8jxmmk3yvi"]
 
 [ext_resource type="Script" path="res://Scripts/Main Menu.gd" id="1_c838t"]
 [ext_resource type="AudioStream" uid="uid://cc5hs7ta51vff" path="res://Sounds/TITLE_SCREEN.wav" id="2_4bo8c"]
 [ext_resource type="AudioStream" uid="uid://dnjy1a3c0scci" path="res://Sounds/Help_SFX.wav" id="2_awbx6"]
 [ext_resource type="AudioStream" uid="uid://qogqcxo7luam" path="res://Sounds/K-9_KATCHERS_Title_SFX.wav" id="4_scclo"]
+[ext_resource type="SpriteFrames" uid="uid://buqjocgnl5ys" path="res://Sprites/Menu_Logo.tres" id="5_c1pj4"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -15,18 +16,20 @@ grow_vertical = 2
 script = ExtResource("1_c838t")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_direction = 2
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -48.0
-offset_top = -50.5
-offset_right = 48.0
-offset_bottom = 50.5
+anchor_bottom = 1.0
+offset_left = -94.0
+offset_top = -180.0
+offset_right = 94.55
+offset_bottom = -27.54
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
+alignment = 1
 
 [node name="Start Game" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -50,6 +53,12 @@ autoplay = true
 [node name="K-9 KATCHERS_TITLE" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_scclo")
 autoplay = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(566, 239)
+scale = Vector2(6.94269, 6.94269)
+sprite_frames = ExtResource("5_c1pj4")
+autoplay = "default"
 
 [connection signal="pressed" from="VBoxContainer/Start Game" to="." method="_on_start_game_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
