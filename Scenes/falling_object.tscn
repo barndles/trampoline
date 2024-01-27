@@ -6,7 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_isqrd"]
 size = Vector2(30, 30)
 
-[node name="FallingObject" type="Node2D"]
+[node name="FallingObject" type="RigidBody2D"]
+collision_layer = 4
+gravity_scale = 0.75
 script = ExtResource("1_oxqbh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -14,7 +16,5 @@ modulate = Color(1, 0.2, 0.14902, 1)
 scale = Vector2(0.22952, 0.22952)
 texture = ExtResource("1_yxuh2")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_isqrd")

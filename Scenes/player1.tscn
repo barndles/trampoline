@@ -18,6 +18,7 @@ default_color = Color(0.207843, 0.184314, 0.160784, 1)
 script = ExtResource("2_5x5hb")
 
 [node name="player1" type="CharacterBody2D" parent="."]
+collision_mask = 2
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="player1"]
 scale = Vector2(3.24975, 3.24975)

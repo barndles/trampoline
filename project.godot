@@ -38,6 +38,8 @@ p2_right={
 ]
 }
 
-[rendering]
+[layer_names]
 
-textures/canvas_textures/default_texture_filter=0
+2d_physics/layer_1="Players"
+2d_physics/layer_2="Falling Objects"
+2d_physics/layer_3="Buildings"

@@ -1,10 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bu8g1eahap64k"]
+[gd_scene load_steps=4 format=3 uid="uid://bu8g1eahap64k"]
 
 [ext_resource type="Script" path="res://Scripts/building_scripts/building_builder.gd" id="1_dmg20"]
 [ext_resource type="Texture2D" uid="uid://dmt0edhf7l0wo" path="res://Sprites/icon.svg" id="2_1d7kh"]
 
-[node name="building_base" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8ort"]
+size = Vector2(128, 128)
+
+[node name="building_base" type="StaticBody2D"]
 script = ExtResource("1_dmg20")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_1d7kh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_i8ort")
