@@ -1,9 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://cdd4crv7gyydl"]
+[gd_scene load_steps=9 format=3 uid="uid://cdd4crv7gyydl"]
 
 [ext_resource type="PackedScene" uid="uid://c4wayj2esb4on" path="res://Scenes/player1.tscn" id="1_3kmge"]
 [ext_resource type="PackedScene" uid="uid://bu8g1eahap64k" path="res://Scenes/buildings/building_base.tscn" id="1_r6bca"]
 [ext_resource type="Script" path="res://Scripts/itemspawner.gd" id="3_ofqxm"]
 [ext_resource type="AudioStream" uid="uid://divm4ibuptpnk" path="res://Sounds/CATCH_CATCH_CATCH.wav" id="4_s38mv"]
+[ext_resource type="Texture2D" uid="uid://crabfn3waud" path="res://Sprites/Images/Street.png" id="5_2wjcw"]
+[ext_resource type="Texture2D" uid="uid://cgwhxd6wyt8v8" path="res://Sprites/Images/Rescue vehicle.png" id="5_bqveu"]
+[ext_resource type="Texture2D" uid="uid://bc6dnn3dtvcs6" path="res://Sprites/Images/skyline.png" id="6_8f6bw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dc8k6"]
 size = Vector2(219.5, 666)
@@ -11,10 +14,10 @@ size = Vector2(219.5, 666)
 [node name="Main_Level" type="Node2D"]
 
 [node name="building_base" parent="." instance=ExtResource("1_r6bca")]
-position = Vector2(929, 534)
+position = Vector2(929, 468)
 
 [node name="Player" parent="." instance=ExtResource("1_3kmge")]
-position = Vector2(198, 583)
+position = Vector2(198, 561)
 
 [node name="TESTNODE" type="Node2D" parent="."]
 script = ExtResource("3_ofqxm")
@@ -32,3 +35,55 @@ shape = SubResource("RectangleShape2D_dc8k6")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_s38mv")
 autoplay = true
+
+[node name="Street" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(96, 600)
+scale = Vector2(3, 3)
+texture = ExtResource("5_2wjcw")
+
+[node name="Street2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(288, 600)
+scale = Vector2(3, 3)
+texture = ExtResource("5_2wjcw")
+
+[node name="Street3" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(480, 600)
+scale = Vector2(3, 3)
+texture = ExtResource("5_2wjcw")
+
+[node name="Street4" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(672, 600)
+scale = Vector2(3, 3)
+texture = ExtResource("5_2wjcw")
+
+[node name="Street5" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(864, 600)
+scale = Vector2(3, 3)
+texture = ExtResource("5_2wjcw")
+
+[node name="Street6" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1056, 600)
+scale = Vector2(3, 3)
+texture = ExtResource("5_2wjcw")
+
+[node name="Skyline" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(288, 331)
+texture = ExtResource("6_8f6bw")
+
+[node name="Skyline2" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(794, 331)
+texture = ExtResource("6_8f6bw")
+
+[node name="RescueVehicle" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(96, 539)
+scale = Vector2(3, 3)
+texture = ExtResource("5_bqveu")
