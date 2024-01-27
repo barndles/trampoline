@@ -11,7 +11,7 @@ size = Vector2(219.5, 666)
 [node name="Main_Level" type="Node2D"]
 
 [node name="building_base" parent="." instance=ExtResource("1_r6bca")]
-position = Vector2(961, 518)
+position = Vector2(929, 534)
 
 [node name="Player" parent="." instance=ExtResource("1_3kmge")]
 position = Vector2(198, 583)
@@ -26,7 +26,7 @@ position = Vector2(-85, 320)
 shape = SubResource("RectangleShape2D_dc8k6")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1260, 326)
+position = Vector2(1256, 325)
 shape = SubResource("RectangleShape2D_dc8k6")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
