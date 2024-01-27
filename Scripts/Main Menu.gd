@@ -28,3 +28,25 @@ func _on_quit_pressed():
 func _on_settings_pressed():
 	#get_tree().change_scene_to_file("res://Scenes/Menus/Settings.tscn")
 	pass
+
+
+func _on_start_game_focus_entered():
+	$"VBoxContainer/Start Game/startCross".show()
+
+func _on_start_game_focus_exited():
+	$"VBoxContainer/Start Game/startCross".hide()
+
+func _on_settings_focus_entered():
+	$VBoxContainer/Settings/setCross.show()
+
+
+func _on_settings_focus_exited():
+	$VBoxContainer/Settings/setCross.hide()
+
+
+func _on_quit_focus_entered():
+	$VBoxContainer/Quit/quitCross.show()
+
+
+func _on_quit_focus_exited():
+	$VBoxContainer/Quit/quitCross.hide()
