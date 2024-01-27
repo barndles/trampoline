@@ -34,7 +34,7 @@ position = Vector2(272.975, 0)
 [node name="Sprite2D" type="AnimatedSprite2D" parent="player2"]
 scale = Vector2(3.25, 3.25)
 sprite_frames = ExtResource("4_mj01g")
-animation = &"idle"
+animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player2"]
 scale = Vector2(1, 2)

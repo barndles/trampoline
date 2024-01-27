@@ -3,6 +3,9 @@ extends Node2D
 @onready var player1 = $player1
 @onready var player2 = $player2
 
+@onready var animated_player1 = $player1/Sprite2D
+@onready var animated_player2 = $player2/Sprite2D
+
 var p1v = Vector2()
 var p2v = Vector2()
 
@@ -20,6 +23,14 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	print(distance)
+	if Input.is_action_pressed("p1_left") or Input.is_action_pressed("p1_right"):
+		animated_player1.play("walk")
+	else:
+		animated_player1.stop()
+	if Input.is_action_pressed("p2_left") or Input.is_action_pressed("p2_right"):
+		animated_player2.play("walk")
+	else:
+		animated_player2.stop()
 	pass
 
 func _physics_process(delta):
