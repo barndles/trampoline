@@ -23,11 +23,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	#print(distance)
-	if Input.is_action_pressed("p1_left") or Input.is_action_pressed("p1_right"):
+	if abs(p1v.x) > 0.3:
 		animated_player1.play("walk")
 	else:
 		animated_player1.stop()
-	if Input.is_action_pressed("p2_left") or Input.is_action_pressed("p2_right"):
+	if abs(p2v.x) > 0.3:
 		animated_player2.play("walk")
 	else:
 		animated_player2.stop()

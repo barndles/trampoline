@@ -14,7 +14,7 @@ script = ExtResource("1_tlkj6")
 [node name="blanket" type="Line2D" parent="."]
 points = PackedVector2Array(0, 0, 0, 0)
 width = 5.0
-default_color = Color(0.933333, 0.713726, 0.25098, 1)
+default_color = Color(0.207843, 0.184314, 0.160784, 1)
 script = ExtResource("2_5x5hb")
 
 [node name="player1" type="CharacterBody2D" parent="."]
@@ -34,7 +34,7 @@ position = Vector2(272.975, 0)
 [node name="Sprite2D" type="AnimatedSprite2D" parent="player2"]
 scale = Vector2(3.25, 3.25)
 sprite_frames = ExtResource("4_mj01g")
-animation = &"walk"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player2"]
 scale = Vector2(1, 2)
