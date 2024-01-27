@@ -6,10 +6,9 @@ var trampolineHeight
 
 var random = RandomNumberGenerator.new()
 var randomVectorInRange = Vector2()
-
 var impulseMultiplier = 500
-@onready var player1 = $"../Player/player1"
-@onready var player2 = $"../Player/player2"
+@onready var player1 = $"/root/Main_Level/Player/player1"
+@onready var player2 = $"/root/Main_Level/Player/player2"
 var v = Vector2() #object velocity
 var gravity = 0.98
 
@@ -25,6 +24,8 @@ var trampolineTightness
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	trampolineHeight = player1.global_position.y #set base bounce height
+	
+	
 	
 	randomVectorInRange = Vector2(((random.randf()* .5) + 0.25) * -1, ((random.randf()* .5) + 0.25) * -1) #random (0.25-0.75, 0.25-0.75) vector mirrored on each axis
 	print(randomVectorInRange)
@@ -67,10 +68,7 @@ func _physics_process(delta):
 	#TEMPORARY SCENE RELOAD - DEBUGGING ONLY - SPACEBAR
 	if Input.is_action_just_pressed("ui_accept"):
 		get_tree().reload_current_scene()
-<<<<<<< Updated upstream
-		
 
-=======
 
 func _integrate_forces(state):
 	# I don't remember if the state transform is local or global. I assumed local
@@ -84,4 +82,4 @@ func _integrate_forces(state):
 	rotation = current_rotation
 	# Set the state's transform to the current transform
 	state.transform = transform
->>>>>>> Stashed changes
+

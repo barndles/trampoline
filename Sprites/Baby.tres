@@ -85,7 +85,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_kpdu7")
 }],
 "loop": true,
-"name": &"Baby_Crash",
+"name": &"Crash",
 "speed": 5.0
 }, {
 "frames": [{
