@@ -8,7 +8,7 @@ var rng = RandomNumberGenerator.new()
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	for n in 3:
-		inst(Vector2(0,((n+1) * (-buildingSprite.texture.get_height()))))
+		inst(Vector2(0,((n+1) * (-buildingSprite.texture.get_height() - 40))))
 
 func inst(pos):
 	var rng_Floors = rng.randi_range(0,1)
