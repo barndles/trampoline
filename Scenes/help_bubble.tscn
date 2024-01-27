@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://cnd1pmakxysew"]
+
+[ext_resource type="Texture2D" uid="uid://gpv0uu60subx" path="res://Sprites/Images/Help bubble anim.png" id="1_nfms0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d424k"]
+atlas = ExtResource("1_nfms0")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nt8e2"]
+atlas = ExtResource("1_nfms0")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_575to"]
+atlas = ExtResource("1_nfms0")
+region = Rect2(128, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncen8"]
+atlas = ExtResource("1_nfms0")
+region = Rect2(192, 0, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f2ak2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d424k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nt8e2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_575to")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncen8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="HelpBubble" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_f2ak2")
+autoplay = "default"
