@@ -4,7 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://cc5hs7ta51vff" path="res://Sounds/TITLE_SCREEN.wav" id="2_4bo8c"]
 [ext_resource type="AudioStream" uid="uid://dnjy1a3c0scci" path="res://Sounds/Help_SFX.wav" id="2_awbx6"]
 [ext_resource type="AudioStream" uid="uid://qogqcxo7luam" path="res://Sounds/K-9_KATCHERS_Title_SFX.wav" id="4_scclo"]
-[ext_resource type="SpriteFrames" uid="uid://buqjocgnl5ys" path="res://Sprites/Menu_Logo.tres" id="5_c1pj4"]
+[ext_resource type="SpriteFrames" uid="uid://daffr3rbvi5k4" path="res://Sprites/Menu_Logo.tres" id="5_c1pj4"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3

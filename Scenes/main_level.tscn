@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c4wayj2esb4on" path="res://Scenes/player1.tscn" id="1_3kmge"]
 [ext_resource type="PackedScene" uid="uid://bu8g1eahap64k" path="res://Scenes/buildings/building_base.tscn" id="1_r6bca"]
 [ext_resource type="PackedScene" uid="uid://0mchb1mnuemn" path="res://Scenes/falling_object.tscn" id="2_xtc7r"]
+[ext_resource type="Script" path="res://Scripts/itemspawner.gd" id="3_ofqxm"]
 [ext_resource type="AudioStream" uid="uid://divm4ibuptpnk" path="res://Sounds/CATCH_CATCH_CATCH.wav" id="4_s38mv"]
 [ext_resource type="Texture2D" uid="uid://cgwhxd6wyt8v8" path="res://Sprites/Images/Rescue vehicle.png" id="5_bqveu"]
 
@@ -16,6 +17,9 @@ position = Vector2(872.33, 583.405)
 
 [node name="Player" parent="." instance=ExtResource("1_3kmge")]
 position = Vector2(198, 583)
+
+[node name="TESTNODE" type="Node2D" parent="."]
+script = ExtResource("3_ofqxm")
 
 [node name="Area2D" type="StaticBody2D" parent="."]
 
