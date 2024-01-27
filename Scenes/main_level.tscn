@@ -1,12 +1,16 @@
-[gd_scene load_steps=10 format=3 uid="uid://cdd4crv7gyydl"]
+[gd_scene load_steps=14 format=3 uid="uid://cdd4crv7gyydl"]
 
 [ext_resource type="PackedScene" uid="uid://c4wayj2esb4on" path="res://Scenes/player1.tscn" id="1_3kmge"]
 [ext_resource type="PackedScene" uid="uid://bu8g1eahap64k" path="res://Scenes/buildings/building_base.tscn" id="1_r6bca"]
 [ext_resource type="Script" path="res://Scripts/itemspawner.gd" id="3_ofqxm"]
-[ext_resource type="AudioStream" uid="uid://divm4ibuptpnk" path="res://Sounds/CATCH_CATCH_CATCH.wav" id="4_s38mv"]
+[ext_resource type="AudioStream" uid="uid://bj72kqbdxoi1i" path="res://Sounds/K-9_CREW_GO.wav" id="4_fpnuq"]
 [ext_resource type="Texture2D" uid="uid://crabfn3waud" path="res://Sprites/Images/Street.png" id="5_2wjcw"]
 [ext_resource type="Texture2D" uid="uid://cgwhxd6wyt8v8" path="res://Sprites/Images/Rescue vehicle.png" id="5_bqveu"]
 [ext_resource type="Texture2D" uid="uid://bc6dnn3dtvcs6" path="res://Sprites/Images/skyline.png" id="6_8f6bw"]
+[ext_resource type="Texture2D" uid="uid://bhogrmuvep3tl" path="res://Sprites/Images/treeline01.png" id="8_riv7a"]
+[ext_resource type="Texture2D" uid="uid://d1ncmmacw1mwi" path="res://Sprites/Images/treeline02.png" id="9_4013n"]
+[ext_resource type="Texture2D" uid="uid://bcinu1bf65k8r" path="res://Sprites/Images/treeline03.png" id="10_pvtyx"]
+[ext_resource type="Texture2D" uid="uid://bdjdlpg86qtll" path="res://Sprites/Images/treeline04.png" id="11_ck7nx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dc8k6"]
 size = Vector2(219.5, 666)
@@ -36,7 +40,7 @@ position = Vector2(1256, 325)
 shape = SubResource("RectangleShape2D_dc8k6")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_s38mv")
+stream = ExtResource("4_fpnuq")
 autoplay = true
 
 [node name="Street" type="Sprite2D" parent="."]
@@ -98,3 +102,27 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(575, 648)
 shape = SubResource("RectangleShape2D_1740e")
+
+[node name="Treeline01" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(376, 464)
+scale = Vector2(3, 3)
+texture = ExtResource("8_riv7a")
+
+[node name="Treeline02" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(388, 462)
+scale = Vector2(3, 3)
+texture = ExtResource("9_4013n")
+
+[node name="Treeline03" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(391, 458)
+scale = Vector2(3, 3)
+texture = ExtResource("10_pvtyx")
+
+[node name="Treeline04" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(417, 459)
+scale = Vector2(3, 3)
+texture = ExtResource("11_ck7nx")
