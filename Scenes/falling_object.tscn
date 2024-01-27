@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://0mchb1mnuemn"]
+[gd_scene load_steps=6 format=3 uid="uid://0mchb1mnuemn"]
 
 [ext_resource type="Script" path="res://Scripts/falling_object.gd" id="1_oxqbh"]
 [ext_resource type="SpriteFrames" uid="uid://6dwd72sedqj4" path="res://Sprites/Baby.tres" id="2_y6bm0"]
+[ext_resource type="AudioStream" uid="uid://c2bly7rytx30i" path="res://Sounds/Floor_Smack_1.wav" id="3_ooe1e"]
+[ext_resource type="AudioStream" uid="uid://dkhuh83oj88di" path="res://Sounds/Sheet_Bounce_1.wav" id="4_smksa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_isqrd"]
 size = Vector2(48, 45.5)
@@ -20,3 +22,9 @@ animation = &"Falling"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1.25)
 shape = SubResource("RectangleShape2D_isqrd")
+
+[node name="Smack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ooe1e")
+
+[node name="Boing" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_smksa")

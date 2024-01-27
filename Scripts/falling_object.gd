@@ -31,6 +31,8 @@ func _ready():
 	fallingObject.apply_impulse(randomVectorInRange * impulseMultiplier)
 	
 
+	
+
 func _process(delta):
 	distanceToP1 = abs(fallingObject.position.x - player1.global_position.x) # we only care about the distance on the x axis, so we can just subtract :)
 	distanceToP2 = abs(fallingObject.position.x - player2.global_position.x)
@@ -52,11 +54,15 @@ func _physics_process(delta):
 		if (fallingObject.position.x > player1.global_position.x) and (fallingObject.position.x < player2.global_position.x):
 			canBounce = true
 		else: canBounce = false
+	if (bouncing == true and canBounce == false):
+		$Boing.play()
 
-	
+
 	
 	
 	
 	#TEMPORARY SCENE RELOAD - DEBUGGING ONLY - SPACEBAR
 	if Input.is_action_just_pressed("ui_accept"):
 		get_tree().reload_current_scene()
+		
+
