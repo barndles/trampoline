@@ -22,7 +22,7 @@ position = Vector2(-85, 320)
 shape = SubResource("RectangleShape2D_dc8k6")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(919, 324)
+position = Vector2(1169, 326)
 shape = SubResource("RectangleShape2D_dc8k6")
 
 [node name="FallingObject" parent="." instance=ExtResource("2_xtc7r")]
