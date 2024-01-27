@@ -1,13 +1,26 @@
-[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://cvmq4mm3qp61k"]
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://cvmq4mm3qp61k"]
 
 [ext_resource type="Texture2D" uid="uid://cpjeqxfnxc7p5" path="res://Sprites/Images/GreenDog.png" id="1_cvlnv"]
+[ext_resource type="Texture2D" uid="uid://co2a555kyvy40" path="res://Sprites/Images/Firedogs-green-lookup.png" id="2_poxir"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8kxuu"]
 atlas = ExtResource("1_cvlnv")
 region = Rect2(0, 0, 16, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ysdn"]
+atlas = ExtResource("2_poxir")
+region = Rect2(0, 0, 16, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_t6jta"]
 atlas = ExtResource("1_cvlnv")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34yti"]
+atlas = ExtResource("2_poxir")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2u7xa"]
+atlas = ExtResource("2_poxir")
 region = Rect2(16, 0, 16, 32)
 
 [resource]
@@ -20,7 +33,10 @@ animations = [{
 "name": &"idle",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ysdn")
+}],
 "loop": true,
 "name": &"idle_lookup",
 "speed": 5.0
@@ -36,7 +52,13 @@ animations = [{
 "name": &"walk",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34yti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2u7xa")
+}],
 "loop": true,
 "name": &"walk_lookup",
 "speed": 5.0
