@@ -77,7 +77,7 @@ func _on_body_entered(body):
 	animatedSprite.play("Crash")
 	fallingObject.sleeping = true
 	print(global.lives)
-	
+	$Smack.play()
 	if (global.lives <= 0):
 		get_tree().quit()
 
