@@ -1,6 +1,6 @@
 extends Node2D
 
-var lives = 5
+@onready var global = get_node("/root/Autoload")
 @onready var fallingObject = self
 @onready var col = $CollisionShape2D
 var trampolineHeight
@@ -72,13 +72,12 @@ func _physics_process(delta):
 
 
 func _on_body_entered(body):
-	print(lives)
-	lives = lives - 1
+	global.lives -= 1
 	print("ouch")
 	animatedSprite.play("Crash")
 	fallingObject.sleeping = true
-	print(lives)
+	print(global.lives)
 	
-	if (lives <= 0):
+	if (global.lives <= 0):
 		get_tree().quit()
 
