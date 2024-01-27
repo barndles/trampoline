@@ -86,7 +86,7 @@ position = Vector2(794, 331)
 texture = ExtResource("6_8f6bw")
 
 [node name="RescueVehicle" type="Sprite2D" parent="."]
-z_index = -1
+z_index = 1
 position = Vector2(96, 539)
 scale = Vector2(3, 3)
 texture = ExtResource("5_bqveu")
@@ -96,5 +96,5 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(575, 635)
+position = Vector2(575, 648)
 shape = SubResource("RectangleShape2D_1740e")
