@@ -1,8 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2ads04j5044"]
+[gd_scene load_steps=3 format=3 uid="uid://d2ads04j5044"]
 
 [ext_resource type="Texture2D" uid="uid://dmt0edhf7l0wo" path="res://Sprites/Images/icon.svg" id="1_2mln3"]
+[ext_resource type="Script" path="res://Scripts/itemspawner.gd" id="1_c5oa4"]
 
 [node name="BuildingOrphanage" type="Node2D"]
+script = ExtResource("1_c5oa4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_2mln3")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
