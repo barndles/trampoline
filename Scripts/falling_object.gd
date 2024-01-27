@@ -47,7 +47,7 @@ func _physics_process(delta):
 		bouncing = true
 		canBounce = false
 		fallingObject.linear_velocity = Vector2(0, 0)
-		fallingObject.apply_impulse(Vector2(bounceAngle.x, -1000))
+		fallingObject.apply_impulse(Vector2(bounceAngle.x, trampolineTightness * -400))
 	if (fallingObject.position.y < trampolineHeight):
 		if (fallingObject.position.x > player1.global_position.x) and (fallingObject.position.x < player2.global_position.x):
 			canBounce = true
