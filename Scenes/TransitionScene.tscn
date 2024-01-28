@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dn5ec634nxbvn"]
+[gd_scene load_steps=22 format=3 uid="uid://dn5ec634nxbvn"]
 
 [ext_resource type="Script" path="res://Scenes/TransitionScene.gd" id="1_iu16w"]
 [ext_resource type="Texture2D" uid="uid://bc6dnn3dtvcs6" path="res://Sprites/Images/skyline.png" id="1_odt6e"]
@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://ddmwq43hjrvvd" path="res://Sounds/The_Building_Is_On_Fire_SFX.wav" id="4_us28v"]
 [ext_resource type="FontFile" uid="uid://dbdv0matl6f8m" path="res://Sprites/Fonty/I-pixel-u.ttf" id="7_mtmyx"]
 [ext_resource type="SpriteFrames" uid="uid://wxv3x02mnh14" path="res://Sprites/Images/Objects/senior.tres" id="8_ukeh7"]
+[ext_resource type="SpriteFrames" uid="uid://qkdimkfm4wmb" path="res://Sprites/Falling_Taco.tres" id="9_hov46"]
 [ext_resource type="SpriteFrames" uid="uid://6dwd72sedqj4" path="res://Sprites/Baby.tres" id="9_xk0aj"]
 [ext_resource type="SpriteFrames" uid="uid://b3oqodddpobac" path="res://Sprites/Images/Objects/hamster.tres" id="10_ny00l"]
 [ext_resource type="SpriteFrames" uid="uid://301ajbvsdvvo" path="res://Sprites/Images/Objects/cat.tres" id="11_kvni4"]
@@ -123,6 +124,12 @@ animation = &"Falling"
 position = Vector2(103, 107)
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("14_e018t")
+animation = &"Crash"
+
+[node name="Sprite2D4" type="AnimatedSprite2D" parent="RichTextLabel3"]
+position = Vector2(60, 130)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("9_hov46")
 animation = &"Crash"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
