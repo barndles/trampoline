@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cdd4crv7gyydl"]
+[gd_scene load_steps=22 format=3 uid="uid://cdd4crv7gyydl"]
 
 [ext_resource type="PackedScene" uid="uid://c4wayj2esb4on" path="res://Scenes/player1.tscn" id="1_3kmge"]
 [ext_resource type="Script" path="res://Scenes/main_level.gd" id="1_7h415"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://crabfn3waud" path="res://Sprites/Images/Street.png" id="5_2wjcw"]
 [ext_resource type="Texture2D" uid="uid://cgwhxd6wyt8v8" path="res://Sprites/Images/Rescue vehicle.png" id="5_bqveu"]
 [ext_resource type="Texture2D" uid="uid://bc6dnn3dtvcs6" path="res://Sprites/Images/skyline.png" id="6_8f6bw"]
+[ext_resource type="AudioStream" uid="uid://c0p5n45x2phl" path="res://Sounds/CHAOS_ATTACKS.wav" id="7_11qcq"]
+[ext_resource type="AudioStream" uid="uid://e1cpmg4c2tc3" path="res://Sounds/FIRE_FIXERS.wav" id="8_4quml"]
 [ext_resource type="Texture2D" uid="uid://bwyp8qtrv83xc" path="res://Sprites/Images/treeline01.png" id="8_riv7a"]
 [ext_resource type="Texture2D" uid="uid://13hw43kaidys" path="res://Sprites/Images/treeline02.png" id="9_4013n"]
 [ext_resource type="Texture2D" uid="uid://dqaub4pk0x3l6" path="res://Sprites/Images/treeline03.png" id="10_pvtyx"]
@@ -58,9 +60,14 @@ script = ExtResource("4_w4o1y")
 position = Vector2(-77.5, 21)
 shape = SubResource("RectangleShape2D_lqb5d")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Music1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_fpnuq")
-autoplay = true
+
+[node name="Music2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_11qcq")
+
+[node name="Music3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_4quml")
 
 [node name="Street" type="Sprite2D" parent="."]
 z_index = -1
@@ -181,3 +188,6 @@ theme_override_font_sizes/normal_font_size = 30
 text = "CURRENT SCORE"
 
 [connection signal="body_entered" from="Ambulance" to="Ambulance" method="_on_body_entered"]
+[connection signal="finished" from="Music1" to="." method="_on_music_1_finished"]
+[connection signal="finished" from="Music2" to="." method="_on_music_2_finished"]
+[connection signal="finished" from="Music3" to="." method="_on_music_3_finished"]

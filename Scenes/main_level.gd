@@ -5,7 +5,8 @@ extends Node2D
 func _ready():
 	update_score(global.score,global.countdown)
 	global.countdown = 6
-	#global.lives = 5
+	musicPlayer()
+	
 
 func update_score(score,count):
 	$Points.text = str(score)
@@ -19,3 +20,20 @@ func _process(delta):
 	update_score(global.score,global.countdown)
 	if global.countdown == 0:
 		get_tree().change_scene_to_file("res://Scenes/TransitionScene.tscn")
+
+func musicPlayer():
+	var track = randi_range(0,2)
+	var album = [$Music1,$Music2,$Music3]
+	album[track].play()
+
+
+func _on_music_1_finished():
+	musicPlayer()
+
+
+func _on_music_2_finished():
+	musicPlayer()
+
+
+func _on_music_3_finished():
+	musicPlayer()
