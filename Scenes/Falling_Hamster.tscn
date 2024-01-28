@@ -1,0 +1,95 @@
+[gd_scene load_steps=13 format=3 uid="uid://celp8yy2h2ikh"]
+
+[ext_resource type="Script" path="res://Scripts/falling_object.gd" id="1_mfu1d"]
+[ext_resource type="Texture2D" uid="uid://bn3vcugsj2mkv" path="res://Sprites/Images/hamster.png" id="2_ov0rs"]
+[ext_resource type="AudioStream" uid="uid://c2bly7rytx30i" path="res://Sounds/Floor_Smack_1.wav" id="3_73pmo"]
+[ext_resource type="AudioStream" uid="uid://dkhuh83oj88di" path="res://Sounds/Sheet_Bounce_1.wav" id="4_tu7w0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdaum"]
+atlas = ExtResource("2_ov0rs")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0lw4"]
+atlas = ExtResource("2_ov0rs")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bk0ah"]
+atlas = ExtResource("2_ov0rs")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irhnv"]
+atlas = ExtResource("2_ov0rs")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ge0w7"]
+atlas = ExtResource("2_ov0rs")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o4u4n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cdaum")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0lw4")
+}],
+"loop": false,
+"name": &"Crash",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bk0ah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_irhnv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ge0w7")
+}],
+"loop": true,
+"name": &"Falling",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_isqrd"]
+size = Vector2(48, 45.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_keubo"]
+
+[node name="FallingObject" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 8
+lock_rotation = true
+continuous_cd = 2
+max_contacts_reported = 5
+contact_monitor = true
+script = ExtResource("1_mfu1d")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_o4u4n")
+animation = &"Crash"
+frame = 1
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.25)
+shape = SubResource("RectangleShape2D_isqrd")
+
+[node name="Smack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_73pmo")
+
+[node name="Boing" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_tu7w0")
+volume_db = 2.6
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_keubo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
