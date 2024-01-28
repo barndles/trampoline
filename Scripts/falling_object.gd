@@ -79,6 +79,8 @@ func _on_body_entered(body):
 	print(global.lives)
 	$Smack.play()
 	if (global.lives <= 0):
+		await get_tree().create_timer(1).timeout
+		$Death.play()
 		await get_tree().create_timer(2).timeout
 		get_tree().change_scene_to_file("res://Scenes/Menus/game_over.tscn")
 
