@@ -1,8 +1,10 @@
 extends Node
 var jokeNum = 0
+@onready var timer = $Timer
+
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _process(delta):
 	var joke = get_child(jokeNum)
-	jokeNum += 1
-	await get_tree().create_timer(randi_range(10, 20)).timeout
-	joke.play()
+	if timer.time_left <= delta:
+		jokeNum += 1
+		joke.play()

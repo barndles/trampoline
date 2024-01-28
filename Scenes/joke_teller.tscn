@@ -16,27 +16,40 @@ script = ExtResource("1_p6t0x")
 
 [node name="J1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_mrlvk")
+volume_db = 10.0
 
 [node name="J2A" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_oeslv")
+volume_db = 10.0
 
 [node name="J2B" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_5rdt0")
+volume_db = 10.0
 
 [node name="J3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_238lf")
+volume_db = 10.0
 
 [node name="J4" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_qije1")
+volume_db = 10.0
 
 [node name="J5" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_anv63")
+volume_db = 10.0
 
 [node name="J6" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_tv56p")
+volume_db = 10.0
 
 [node name="J7" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_kne7s")
+volume_db = 10.0
 
 [node name="J8" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_s33ru")
+volume_db = 10.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 15.0
+autostart = true
