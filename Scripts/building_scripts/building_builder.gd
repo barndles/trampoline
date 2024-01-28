@@ -2,7 +2,6 @@ extends Node
 
 @onready var buildingSprite = $Sprite2D
 var array = [preload("res://Scenes/buildings/building_orphanage.tscn"), preload("res://Scenes/buildings/building_oldhome.tscn"),preload("res://Scenes/buildings/building_petshop.tscn"),preload("res://Scenes/buildings/building_tacotech.tscn")]
-var buildingSpawn = preload("res://Scenes/buildings/building_orphanage.tscn")
 var babySpawn = preload("res://Scenes/falling_object.tscn")
 var rng = RandomNumberGenerator.new()
 # Called when the node enters the scene tree for the first time.
