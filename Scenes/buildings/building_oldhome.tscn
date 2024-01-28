@@ -40,9 +40,6 @@ animations = [{
 scale = Vector2(2, 2)
 texture = ExtResource("1_3wx4g")
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
-
 [node name="Fire_Left" type="AnimatedSprite2D" parent="."]
 position = Vector2(-127, 7)
 scale = Vector2(1.71875, 1.71875)

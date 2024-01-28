@@ -1,0 +1,58 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://c3a81mkjyovgj"]
+
+[ext_resource type="Texture2D" uid="uid://bkd387gonn6v" path="res://Sprites/Images/throwingObjects/brick.png" id="1_4mvfb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfirj"]
+atlas = ExtResource("1_4mvfb")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p65w4"]
+atlas = ExtResource("1_4mvfb")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvm8n"]
+atlas = ExtResource("1_4mvfb")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0gfn"]
+atlas = ExtResource("1_4mvfb")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67eso"]
+atlas = ExtResource("1_4mvfb")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvctg"]
+atlas = ExtResource("1_4mvfb")
+region = Rect2(0, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfirj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p65w4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvm8n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0gfn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_67eso")
+}],
+"loop": false,
+"name": &"Crash",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvctg")
+}],
+"loop": false,
+"name": &"Falling",
+"speed": 5.0
+}]
