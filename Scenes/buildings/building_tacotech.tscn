@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://cxrfv4ocmomdj"]
+
+[ext_resource type="Texture2D" uid="uid://dv5vwebe2bhb8" path="res://Sprites/Images/building_f1_alt.PNG" id="1_ywkhk"]
+[ext_resource type="Texture2D" uid="uid://bwu7bckcr81is" path="res://Sprites/Images/Fire.png" id="2_7ar5y"]
+[ext_resource type="Texture2D" uid="uid://c0wsk3gtqavdq" path="res://Sprites/Images/Signs/sign-tacotronics.PNG" id="3_3jbng"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jaylc"]
+atlas = ExtResource("2_7ar5y")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iriwq"]
+atlas = ExtResource("2_7ar5y")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3gjkk"]
+atlas = ExtResource("2_7ar5y")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j7nyd"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jaylc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iriwq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3gjkk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="OldHome" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_ywkhk")
+
+[node name="Fire_Left" type="AnimatedSprite2D" parent="."]
+position = Vector2(-127, 7)
+scale = Vector2(1.71875, 1.71875)
+sprite_frames = SubResource("SpriteFrames_j7nyd")
+autoplay = "default"
+
+[node name="Fire_Left2" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.999985, 7)
+scale = Vector2(1.71875, 1.71875)
+sprite_frames = SubResource("SpriteFrames_j7nyd")
+autoplay = "default"
+
+[node name="Fire_Left3" type="AnimatedSprite2D" parent="."]
+position = Vector2(130, 7)
+scale = Vector2(1.71875, 1.71875)
+sprite_frames = SubResource("SpriteFrames_j7nyd")
+autoplay = "default"
+
+[node name="TechSign" type="Sprite2D" parent="."]
+position = Vector2(0, -102)
+texture = ExtResource("3_3jbng")
