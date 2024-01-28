@@ -37,7 +37,7 @@ alignment = 1
 
 [node name="Start Game" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_d5iy1")
 theme_override_font_sizes/font_size = 30
 text = "START GAME"
@@ -51,7 +51,7 @@ texture = ExtResource("7_ygqiu")
 
 [node name="Settings" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_d5iy1")
 theme_override_font_sizes/font_size = 30
 text = "CREDITS"
@@ -66,23 +66,41 @@ texture = ExtResource("7_ygqiu")
 [node name="credits" type="RichTextLabel" parent="VBoxContainer/Settings"]
 visible = false
 layout_mode = 0
-offset_left = -429.0
-offset_top = -142.0
-offset_right = 40.0
-offset_bottom = 162.0
-theme_override_colors/default_color = Color(1, 0.796078, 0.0705882, 1)
+offset_left = -434.0
+offset_top = -114.0
+offset_right = 35.0
+offset_bottom = 190.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_d5iy1")
-theme_override_font_sizes/normal_font_size = 30
-text = "Credits go to!
-Art - by Llumaru and eric3dee
-Music - by oermergeesh
-Programming - by Barndles, Durf, and ButtersBo
+theme_override_font_sizes/normal_font_size = 25
+text = "CREDITS
+ART - LLUMARU AND ERIC3DEE
+MUSIC - OERMERGEESH
+PROGRAMMING - BARNDLES, DURF, BUTTERSBO
 
-A special thanks to Tulsa University"
+SPECIAL THANKS TO
+TULSA UNIVERSITY"
+scroll_active = false
+
+[node name="credits2" type="RichTextLabel" parent="VBoxContainer/Settings/credits"]
+layout_mode = 0
+offset_top = -4.0
+offset_right = 469.0
+offset_bottom = 300.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_d5iy1")
+theme_override_font_sizes/normal_font_size = 25
+text = "CREDITS
+ART - LLUMARU AND ERIC3DEE
+MUSIC - OERMERGEESH
+PROGRAMMING - BARNDLES, DURF, BUTTERSBO
+
+SPECIAL THANKS TO
+TULSA UNIVERSITY"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_d5iy1")
 theme_override_font_sizes/font_size = 30
 text = "QUIT"

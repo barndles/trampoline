@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c4u63bgcj76yl"]
 
-[ext_resource type="Texture2D" uid="uid://dfjh48cyc1gwc" path="res://Sprites/Images/Background/Red Cross.png" id="1_euv2u"]
+[ext_resource type="Texture2D" uid="uid://dfjh48cyc1gwc" path="res://Sprites/Images/Red Cross.png" id="1_euv2u"]
 [ext_resource type="Script" path="res://health.gd" id="2_j7rlq"]
 
 [node name="Node2D" type="Node2D"]
