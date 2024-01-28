@@ -1,7 +1,7 @@
 extends Node
 
 @onready var resetTime = 0
-var thrown_object = preload("res://Scenes/falling_object.tscn")
+var thrown_object = [preload("res://Scenes/falling_object.tscn"), preload("res://Scenes/Falling_Grandpa.tscn"), preload("res://Scenes/Fire_extinguisher.tscn")]
 var help_bubble = preload("res://Scenes/help_bubble.tscn")
 var spawn_points = [Vector2(831,307),Vector2(959,307),Vector2(1087,307),Vector2(831,130),Vector2(959,130),Vector2(1087,130)]
 # Called when the node enters the scene tree for the first time.
@@ -19,7 +19,7 @@ func wait_seconds_to_spawn():
 	wait_seconds_to_spawn()
 
 func inst(pos):
-	var instance = thrown_object.instantiate();
+	var instance = thrown_object[randi_range(0,2)].instantiate();
 	instance.position = pos
 	add_child(instance)
 

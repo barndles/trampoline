@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://s6hgoby3cvcx"]
 
 [ext_resource type="Script" path="res://Scripts/falling_object.gd" id="1_j5y3x"]
-[ext_resource type="SpriteFrames" path="res://Sprites/fire_extinguisher.tres" id="2_t0fec"]
+[ext_resource type="SpriteFrames" uid="uid://cv8qw3mtvy28p" path="res://Sprites/fire_extinguisher.tres" id="2_t0fec"]
 [ext_resource type="AudioStream" uid="uid://c2bly7rytx30i" path="res://Sounds/Floor_Smack_1.wav" id="3_2mc3m"]
 [ext_resource type="AudioStream" uid="uid://dkhuh83oj88di" path="res://Sounds/Sheet_Bounce_1.wav" id="4_t1x76"]
 
