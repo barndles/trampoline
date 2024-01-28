@@ -15,13 +15,13 @@ region = Rect2(0, 0, 16, 32)
 atlas = ExtResource("1_alhkn")
 region = Rect2(16, 0, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_o37vm"]
-atlas = ExtResource("2_tjqcm")
-region = Rect2(0, 0, 16, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_gue4j"]
 atlas = ExtResource("2_tjqcm")
 region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o37vm"]
+atlas = ExtResource("2_tjqcm")
+region = Rect2(0, 0, 16, 32)
 
 [resource]
 animations = [{
@@ -54,10 +54,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_o37vm")
+"texture": SubResource("AtlasTexture_gue4j")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gue4j")
+"texture": SubResource("AtlasTexture_o37vm")
 }],
 "loop": true,
 "name": &"walk_lookup",

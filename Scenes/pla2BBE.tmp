@@ -1,20 +1,16 @@
-[gd_scene load_steps=10 format=3 uid="uid://c4wayj2esb4on"]
+[gd_scene load_steps=8 format=3 uid="uid://c4wayj2esb4on"]
 
 [ext_resource type="Script" path="res://Scripts/playerController.gd" id="1_tlkj6"]
 [ext_resource type="Script" path="res://Scripts/Blanket.gd" id="2_5x5hb"]
 [ext_resource type="SpriteFrames" uid="uid://c7bmprutk25xh" path="res://Sprites/P1frames.tres" id="3_2l6tw"]
 [ext_resource type="SpriteFrames" uid="uid://cvmq4mm3qp61k" path="res://Sprites/P2Frames.tres" id="4_e8kkj"]
-[ext_resource type="Script" path="res://Scenes/lookup1.gd" id="4_y36er"]
 [ext_resource type="Script" path="res://Scenes/lookup.gd" id="5_i4fdi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_agvcq"]
 size = Vector2(52, 52)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1q05g"]
-size = Vector2(271, 341)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lo2ii"]
-size = Vector2(278, 339)
+size = Vector2(278, 155)
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_tlkj6")
@@ -37,13 +33,6 @@ animation = &"walk"
 scale = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_agvcq")
 
-[node name="Area2D" type="Area2D" parent="player1"]
-script = ExtResource("4_y36er")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player1/Area2D"]
-position = Vector2(110.5, -222.5)
-shape = SubResource("RectangleShape2D_1q05g")
-
 [node name="player2" type="CharacterBody2D" parent="."]
 position = Vector2(272.975, 0)
 collision_mask = 5
@@ -61,10 +50,5 @@ shape = SubResource("RectangleShape2D_agvcq")
 script = ExtResource("5_i4fdi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player2/Area2D"]
-position = Vector2(-108.975, -223.5)
+position = Vector2(-108.975, -131.5)
 shape = SubResource("RectangleShape2D_lo2ii")
-
-[connection signal="area_entered" from="player1/Area2D" to="player1/Area2D" method="object_spotted"]
-[connection signal="area_exited" from="player1/Area2D" to="player1/Area2D" method="object_gone"]
-[connection signal="area_entered" from="player2/Area2D" to="player2/Area2D" method="object_spotted"]
-[connection signal="area_exited" from="player2/Area2D" to="player2/Area2D" method="object_gone"]

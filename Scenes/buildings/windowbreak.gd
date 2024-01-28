@@ -6,5 +6,6 @@ extends Area2D
 	#window_sprite.play("Broken")
 # Called when the node enters the scene tree for the first time.
 func on_window_entered(body):
-	window_sprite.play("broken")
+	print("entered")
+	window_sprite.play("Broken")
 

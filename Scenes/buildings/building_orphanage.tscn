@@ -134,3 +134,7 @@ shape = SubResource("RectangleShape2D_ajlvr")
 [node name="Window" type="AnimatedSprite2D" parent="Fires_Right/Area2D"]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_8dlm7")
+
+[connection signal="area_entered" from="Fires/Area2D" to="Fires/Area2D" method="on_window_entered"]
+[connection signal="area_entered" from="Fires_Center/Area2D" to="Fires/Area2D" method="on_window_entered"]
+[connection signal="area_entered" from="Fires_Right/Area2D" to="Fires/Area2D" method="on_window_entered"]

@@ -10,6 +10,8 @@ extends Node2D
 var p1v = Vector2()
 var p2v = Vector2()
 
+@onready var playerlookup = get_node("/root/P1Lookup")
+
 var p1speed = 2
 var p2speed = 2
 
@@ -28,11 +30,17 @@ func _input(event):
 func _process(delta):
 	#print(distance)
 	if abs(p1v.x) > 0.3:
-		animated_player1.play("walk")
+		if(playerlookup.p1lu):
+			animated_player1.play("walk_lookup")
+		else:
+			animated_player1.play("walk")
 	else:
 		animated_player1.stop()
 	if abs(p2v.x) > 0.3:
-		animated_player2.play("walk")
+		if(playerlookup.p2lu):
+			animated_player2.play("walk_lookup")
+		else:
+			animated_player2.play("walk")
 	else:
 		animated_player2.stop()
 	pass

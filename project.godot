@@ -18,6 +18,7 @@ config/icon="res://Sprites/Images/icon.svg"
 [autoload]
 
 Autoload="*res://Scenes/autoload.tscn"
+P1Lookup="*res://p_1_lookup.gd"
 
 [display]
 
