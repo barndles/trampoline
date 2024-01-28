@@ -68,15 +68,9 @@ func _physics_process(delta):
 
 
 	#TEMPORARY SCENE RELOAD - DEBUGGING ONLY - SPACEBAR
-	if Input.is_action_just_pressed("ui_accept"):
-		global.lives = 5
-		get_tree().reload_current_scene()
-	if Input.is_action_just_pressed("ui_down"): global.lives -= 1
-
 
 
 func _on_body_entered(body):
-
 	animatedSprite.play("Crash")
 	fallingObject.sleeping = true
 	$Smack.play()

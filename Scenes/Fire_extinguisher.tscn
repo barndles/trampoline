@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/falling_hazard.gd" id="1_lr76b"]
 [ext_resource type="SpriteFrames" uid="uid://cv8qw3mtvy28p" path="res://Sprites/fire_extinguisher.tres" id="2_t0fec"]
 [ext_resource type="AudioStream" uid="uid://c2bly7rytx30i" path="res://Sounds/Floor_Smack_1.wav" id="3_2mc3m"]
-[ext_resource type="AudioStream" uid="uid://dkhuh83oj88di" path="res://Sounds/Sheet_Bounce_1.wav" id="4_t1x76"]
+[ext_resource type="AudioStream" uid="uid://cpplikfpp75pg" path="res://Sounds/Is_that_our_fire_extinguisher_SFX.wav" id="4_3jq4h"]
 [ext_resource type="PackedScene" uid="uid://cmtiplo67875e" path="res://Scenes/flasher.tscn" id="5_uk31j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_isqrd"]
@@ -31,8 +31,9 @@ shape = SubResource("RectangleShape2D_isqrd")
 stream = ExtResource("3_2mc3m")
 
 [node name="Boing" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_t1x76")
-volume_db = 2.6
+stream = ExtResource("4_3jq4h")
+volume_db = -5.0
+autoplay = true
 
 [node name="flasher" parent="." instance=ExtResource("5_uk31j")]
 

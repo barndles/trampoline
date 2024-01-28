@@ -9,10 +9,6 @@ func _ready():
 	global.countdown = 6
 	musicPlayer()
 
-func _input(event):	
-	if event.is_action_pressed("skip"):
-		global.countdown -= 1
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if points < global.score:

@@ -65,12 +65,6 @@ func _physics_process(delta):
 		#print("guhguhgughu")
 		pass
 
-	#TEMPORARY SCENE RELOAD - DEBUGGING ONLY - SPACEBAR
-	if Input.is_action_just_pressed("ui_accept"):
-		global.lives = 5
-		get_tree().reload_current_scene()
-
-
 
 func _on_body_entered(body):
 	global.lives -= 1

@@ -31,7 +31,7 @@ stream = ExtResource("3_ooe1e")
 
 [node name="Boing" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_atn1m")
-volume_db = 2.6
+volume_db = -5.0
 autoplay = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
