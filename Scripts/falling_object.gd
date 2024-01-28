@@ -69,6 +69,8 @@ func _physics_process(delta):
 		get_tree().reload_current_scene()
 
 
+
+
 func _on_body_entered(body):
 	global.lives -= 1
 	print("ouch")
