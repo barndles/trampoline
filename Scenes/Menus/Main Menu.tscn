@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bmv8jxmmk3yvi"]
+[gd_scene load_steps=10 format=3 uid="uid://bmv8jxmmk3yvi"]
 
 [ext_resource type="Script" path="res://Scripts/Main Menu.gd" id="1_c838t"]
 [ext_resource type="AudioStream" uid="uid://cc5hs7ta51vff" path="res://Sounds/TITLE_SCREEN.wav" id="2_4bo8c"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://dbdv0matl6f8m" path="res://Sprites/Fonty/I-pixel-u.ttf" id="2_d5iy1"]
 [ext_resource type="AudioStream" uid="uid://qogqcxo7luam" path="res://Sounds/K-9_KATCHERS_Title_SFX.wav" id="4_scclo"]
 [ext_resource type="SpriteFrames" uid="uid://daffr3rbvi5k4" path="res://Sprites/Menu_Logo.tres" id="5_c1pj4"]
+[ext_resource type="AudioStream" uid="uid://c4invn7aj1nmy" path="res://Sounds/Select_SFX_01.wav" id="5_daimn"]
 [ext_resource type="Texture2D" uid="uid://dfjh48cyc1gwc" path="res://Sprites/Images/Red Cross.png" id="7_ygqiu"]
 [ext_resource type="Texture2D" uid="uid://dgccjncwuvwgi" path="res://Sprites/Images/TitleScreenBG.png" id="8_dnfsy"]
 
@@ -95,6 +96,9 @@ texture = ExtResource("7_ygqiu")
 
 [node name="Starting" type="AudioStreamPlayer" parent="VBoxContainer"]
 stream = ExtResource("2_awbx6")
+
+[node name="Select" type="AudioStreamPlayer" parent="VBoxContainer"]
+stream = ExtResource("5_daimn")
 
 [node name="MenuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_4bo8c")

@@ -56,6 +56,7 @@ func _physics_process(delta):
 	if (fallingObject.position.y > trampolineHeight) and canBounce:
 		if explode:
 			global.lives -= 1
+			get_node("/root/Autoload/Rip").play()
 			explode = false
 			animatedSprite.play("Crash")
 			flasher.stop()

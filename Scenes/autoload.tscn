@@ -1,6 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://cb07u44i2konu"]
+[gd_scene load_steps=5 format=3 uid="uid://cb07u44i2konu"]
 
 [ext_resource type="Script" path="res://Scenes/autoload.gd" id="1_5abej"]
+[ext_resource type="AudioStream" uid="uid://copf5rh7pgk3" path="res://Sounds/Sheet_Tear_1.wav" id="2_5inse"]
+[ext_resource type="AudioStream" uid="uid://bu2p3wy4wesmf" path="res://Sounds/Shatter_Impact_1.wav" id="3_f0vjq"]
+[ext_resource type="AudioStream" uid="uid://dkhuh83oj88di" path="res://Sounds/Sheet_Bounce_1.wav" id="4_7fyyh"]
 
 [node name="Autoload" type="Node2D"]
 script = ExtResource("1_5abej")
+
+[node name="Rip" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_5inse")
+volume_db = 2.0
+
+[node name="Shatter" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_f0vjq")
+volume_db = 2.0
+
+[node name="Bounce" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_7fyyh")
+volume_db = 2.0

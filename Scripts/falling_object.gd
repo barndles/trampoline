@@ -52,6 +52,7 @@ func _physics_process(delta):
 		animatedSprite.play("Falling")
 	if (fallingObject.position.y > trampolineHeight) and canBounce:
 		bouncing = true
+		get_node("/root/Autoload/Bounce").play()
 		canBounce = false
 		fallingObject.linear_velocity = Vector2(0, 0)
 		fallingObject.apply_impulse(Vector2(bounceAngle.x, trampolineTightness * -400))

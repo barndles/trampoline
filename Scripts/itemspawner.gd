@@ -38,6 +38,7 @@ func inst(pos):
 	
 func object_select():
 	var rng_randomization = randi_range(1,5)
+	get_node("/root/Autoload/Shatter").play()
 	if(rng_randomization % 2 == 1):
 		return obj_good[randi_range(0,2)]
 	if(rng_randomization % 2 == 0):

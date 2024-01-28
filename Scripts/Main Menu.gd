@@ -35,12 +35,14 @@ func _on_settings_pressed():
 
 func _on_start_game_focus_entered():
 	$"VBoxContainer/Start Game/startCross".show()
+	$VBoxContainer/Select.play()
 
 func _on_start_game_focus_exited():
 	$"VBoxContainer/Start Game/startCross".hide()
 
 func _on_settings_focus_entered():
 	$VBoxContainer/Settings/setCross.show()
+	$VBoxContainer/Select.play()
 
 
 func _on_settings_focus_exited():
@@ -49,6 +51,7 @@ func _on_settings_focus_exited():
 
 func _on_quit_focus_entered():
 	$VBoxContainer/Quit/quitCross.show()
+	$VBoxContainer/Select.play()
 
 
 func _on_quit_focus_exited():
