@@ -23,6 +23,7 @@ var distanceToP2
 var trampolineTightness
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	trampolineHeight = player1.global_position.y #set base bounce height
