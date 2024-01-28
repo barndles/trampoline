@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfjh48cyc1gwc"
-path="res://.godot/imported/Red Cross.png-e8702848faac27a047d2e4cb4acfd394.ctex"
+uid="uid://1i0xqih7xhjm"
+path="res://.godot/imported/Red Cross.png-957ddd92a870da261412dedcd4df8f44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Images/Red Cross.png"
-dest_files=["res://.godot/imported/Red Cross.png-e8702848faac27a047d2e4cb4acfd394.ctex"]
+source_file="res://Red Cross.png"
+dest_files=["res://.godot/imported/Red Cross.png-957ddd92a870da261412dedcd4df8f44.ctex"]
 
 [params]
 

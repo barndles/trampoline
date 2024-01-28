@@ -23,7 +23,7 @@ collision_mask = 5
 [node name="Sprite2D" type="AnimatedSprite2D" parent="player1"]
 scale = Vector2(3.24975, 3.24975)
 sprite_frames = ExtResource("3_2l6tw")
-animation = &"idle_lookup"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player1"]
 scale = Vector2(1, 2)
@@ -38,6 +38,6 @@ scale = Vector2(3.25, 3.25)
 sprite_frames = ExtResource("4_e8kkj")
 animation = &"idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player2"]
+[node name="Player_Collision" type="CollisionShape2D" parent="player2"]
 scale = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_agvcq")
