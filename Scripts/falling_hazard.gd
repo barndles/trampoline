@@ -79,7 +79,7 @@ func _on_body_entered(body):
 	animatedSprite.play("Crash")
 	fallingObject.sleeping = true
 	$Smack.play()
-
+	flasher.stop()
 
 
 func _on_area_2d_area_entered(area):

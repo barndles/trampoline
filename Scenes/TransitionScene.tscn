@@ -1,11 +1,11 @@
 [gd_scene load_steps=18 format=3 uid="uid://dn5ec634nxbvn"]
 
 [ext_resource type="Script" path="res://Scenes/TransitionScene.gd" id="1_iu16w"]
-[ext_resource type="Texture2D" uid="uid://bc6dnn3dtvcs6" path="res://Sprites/Images/Background/skyline.png" id="1_odt6e"]
-[ext_resource type="Texture2D" uid="uid://crabfn3waud" path="res://Sprites/Images/Background/Street.png" id="2_okj7l"]
-[ext_resource type="Texture2D" uid="uid://d3ah1cxy5xllk" path="res://Sprites/Images/Background/On Fire bubble anim.png" id="3_t3ube"]
+[ext_resource type="Texture2D" uid="uid://bc6dnn3dtvcs6" path="res://Sprites/Images/skyline.png" id="1_odt6e"]
+[ext_resource type="Texture2D" uid="uid://crabfn3waud" path="res://Sprites/Images/Street.png" id="2_okj7l"]
+[ext_resource type="Texture2D" uid="uid://d3ah1cxy5xllk" path="res://Sprites/Images/On Fire bubble anim.png" id="3_t3ube"]
+[ext_resource type="Texture2D" uid="uid://b33v58v2ryj8h" path="res://Sprites/Images/Background/TransitionScreen.png" id="4_ki4ts"]
 [ext_resource type="AudioStream" uid="uid://ddmwq43hjrvvd" path="res://Sounds/The_Building_Is_On_Fire_SFX.wav" id="4_us28v"]
-[ext_resource type="Texture2D" uid="uid://cgwhxd6wyt8v8" path="res://Sprites/Images/Background/Rescue vehicle.png" id="5_0f7pr"]
 [ext_resource type="FontFile" uid="uid://dbdv0matl6f8m" path="res://Sprites/Fonty/I-pixel-u.ttf" id="7_mtmyx"]
 [ext_resource type="SpriteFrames" uid="uid://wxv3x02mnh14" path="res://Sprites/Images/Objects/senior.tres" id="8_ukeh7"]
 [ext_resource type="SpriteFrames" uid="uid://6dwd72sedqj4" path="res://Sprites/Baby.tres" id="9_xk0aj"]
@@ -34,13 +34,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 12.0
 }]
 
 [node name="TransitionScene" type="Node2D"]
 script = ExtResource("1_iu16w")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+visible = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.5, 0.5)
@@ -90,9 +91,71 @@ position = Vector2(1054, 535)
 scale = Vector2(3, 3)
 texture = ExtResource("2_okj7l")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(942, 253)
+[node name="TransitionScreen" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("4_ki4ts")
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+offset_left = 812.0
+offset_top = 242.0
+offset_right = 980.0
+offset_bottom = 600.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("7_mtmyx")
+theme_override_font_sizes/normal_font_size = 28
+
+[node name="Sprite2D" type="Sprite2D" parent="RichTextLabel3"]
+position = Vector2(36, 87)
+scale = Vector2(4.1875, 4.1875)
+texture = ExtResource("12_w81bu")
+
+[node name="Sprite2D2" type="AnimatedSprite2D" parent="RichTextLabel3"]
+position = Vector2(98, 71)
 scale = Vector2(3, 3)
+sprite_frames = ExtResource("13_wq4f7")
+animation = &"Falling"
+
+[node name="Sprite2D3" type="AnimatedSprite2D" parent="RichTextLabel3"]
+position = Vector2(103, 107)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("14_e018t")
+animation = &"Crash"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 136.0
+offset_top = 256.0
+offset_right = 320.0
+offset_bottom = 609.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("7_mtmyx")
+theme_override_font_sizes/normal_font_size = 28
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="RichTextLabel2"]
+position = Vector2(44, 87)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("8_ukeh7")
+
+[node name="Sprite2D2" type="AnimatedSprite2D" parent="RichTextLabel2"]
+position = Vector2(111, 74)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("9_xk0aj")
+animation = &"Falling"
+
+[node name="Sprite2D4" type="AnimatedSprite2D" parent="RichTextLabel2"]
+position = Vector2(162, 72)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("10_ny00l")
+
+[node name="Sprite2D3" type="AnimatedSprite2D" parent="RichTextLabel2"]
+position = Vector2(112, 125)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("11_kvni4")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(587, 377)
+scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_1sr52")
 autoplay = "default"
 
@@ -100,17 +163,11 @@ autoplay = "default"
 stream = ExtResource("4_us28v")
 autoplay = true
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(79, 479)
-scale = Vector2(2.45313, 2.45313)
-texture = ExtResource("5_0f7pr")
-
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = 75.0
 offset_top = 22.0
 offset_right = 1085.0
 offset_bottom = 125.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("7_mtmyx")
 theme_override_font_sizes/normal_font_size = 40
@@ -118,72 +175,11 @@ bbcode_enabled = true
 text = "[shake rate=50.0 level=20 connected=1]OH NO!![/shake] THE NURSING HOME/ORPHANAGE/ANIMAL SHELTER IS ON FIRE!"
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="."]
-offset_left = 309.0
-offset_top = 453.0
-offset_right = 919.0
-offset_bottom = 513.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
+offset_left = 422.0
+offset_top = 466.0
+offset_right = 1032.0
+offset_bottom = 526.0
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("7_mtmyx")
 theme_override_font_sizes/normal_font_size = 40
-text = "Press \"Space\" to continue"
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="."]
-offset_left = 164.0
-offset_top = 144.0
-offset_right = 348.0
-offset_bottom = 497.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("7_mtmyx")
-theme_override_font_sizes/normal_font_size = 28
-text = " VICTIMS"
-
-[node name="Sprite2D" type="AnimatedSprite2D" parent="RichTextLabel2"]
-position = Vector2(81, 140)
-scale = Vector2(3, 3)
-sprite_frames = ExtResource("8_ukeh7")
-
-[node name="Sprite2D2" type="AnimatedSprite2D" parent="RichTextLabel2"]
-position = Vector2(86, 74)
-scale = Vector2(3, 3)
-sprite_frames = ExtResource("9_xk0aj")
-animation = &"Falling"
-
-[node name="Sprite2D4" type="AnimatedSprite2D" parent="RichTextLabel2"]
-position = Vector2(108, 224)
-scale = Vector2(3, 3)
-sprite_frames = ExtResource("10_ny00l")
-
-[node name="Sprite2D3" type="AnimatedSprite2D" parent="RichTextLabel2"]
-position = Vector2(54, 226)
-scale = Vector2(3, 3)
-sprite_frames = ExtResource("11_kvni4")
-
-[node name="RichTextLabel3" type="RichTextLabel" parent="."]
-offset_left = 632.0
-offset_top = 145.0
-offset_right = 800.0
-offset_bottom = 503.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("7_mtmyx")
-theme_override_font_sizes/normal_font_size = 28
-text = "HAZARDS"
-
-[node name="Sprite2D" type="Sprite2D" parent="RichTextLabel3"]
-position = Vector2(72, 89)
-scale = Vector2(4.1875, 4.1875)
-texture = ExtResource("12_w81bu")
-
-[node name="Sprite2D2" type="AnimatedSprite2D" parent="RichTextLabel3"]
-position = Vector2(72, 154)
-scale = Vector2(3, 3)
-sprite_frames = ExtResource("13_wq4f7")
-animation = &"Falling"
-
-[node name="Sprite2D3" type="AnimatedSprite2D" parent="RichTextLabel3"]
-position = Vector2(78, 202)
-scale = Vector2(3, 3)
-sprite_frames = ExtResource("14_e018t")
-animation = &"Crash"
+text = "PRESS SPACE"
