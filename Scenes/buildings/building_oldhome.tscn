@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bcv4vploituyn"]
 
-[ext_resource type="Texture2D" uid="uid://dv5vwebe2bhb8" path="res://Sprites/Images/building_f1_alt.PNG" id="1_3wx4g"]
-[ext_resource type="Texture2D" uid="uid://bwu7bckcr81is" path="res://Sprites/Images/Fire.png" id="2_yp3hl"]
+[ext_resource type="Texture2D" uid="uid://dv5vwebe2bhb8" path="res://Sprites/Images/Background/building_f1_alt.PNG" id="1_3wx4g"]
+[ext_resource type="Texture2D" uid="uid://bwu7bckcr81is" path="res://Sprites/Images/Background/Fire.png" id="2_yp3hl"]
 [ext_resource type="Texture2D" uid="uid://lygds5yn7q2m" path="res://Sprites/Images/Signs/OldFolks_Sign.PNG" id="3_bg1cg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jaylc"]
