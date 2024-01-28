@@ -4,9 +4,14 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$VBoxContainer/Restart.grab_focus()
-
+	update_score(global.score)
+	
+func update_score(score):
+	$"Score Label/Score".text = str(score)
+	
 func _on_restart_pressed():
 	global.lives = 5
+	global.score = 0
 	get_tree().change_scene_to_file("res://Scenes/main_level.tscn")
 	
 func _on_quit_pressed():
