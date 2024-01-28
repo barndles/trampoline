@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dn5ec634nxbvn"]
+[gd_scene load_steps=28 format=3 uid="uid://dn5ec634nxbvn"]
 
 [ext_resource type="Script" path="res://Scenes/TransitionScene.gd" id="1_iu16w"]
 [ext_resource type="Texture2D" uid="uid://bc6dnn3dtvcs6" path="res://Sprites/Images/Background/skyline.png" id="1_odt6e"]
@@ -15,6 +15,7 @@
 [ext_resource type="SpriteFrames" uid="uid://cdhif0v436ufv" path="res://Sprites/Images/Objects/FireExtinguisher.tres" id="13_wq4f7"]
 [ext_resource type="SpriteFrames" uid="uid://cmgcuv3wi5nhp" path="res://Sprites/brick.tres" id="14_e018t"]
 [ext_resource type="AudioStream" uid="uid://bovrtpgow4e67" path="res://Sounds/Jokes/Joke_1.wav" id="15_0dgtu"]
+[ext_resource type="Script" path="res://Scenes/VoiceLines.gd" id="15_lf4qu"]
 [ext_resource type="AudioStream" uid="uid://b3m6fh14o8i72" path="res://Sounds/Jokes/Joke_2A.wav" id="16_dxyjb"]
 [ext_resource type="AudioStream" uid="uid://cgndddyuhsc0n" path="res://Sounds/Jokes/Joke_2B.wav" id="17_p1la6"]
 [ext_resource type="AudioStream" uid="uid://bouxf8mev86o" path="res://Sounds/Jokes/Joke_3.wav" id="18_bw8pb"]
@@ -198,6 +199,7 @@ sprite_frames = ExtResource("14_e018t")
 animation = &"Crash"
 
 [node name="Node" type="Node" parent="."]
+script = ExtResource("15_lf4qu")
 
 [node name="J1" type="AudioStreamPlayer" parent="Node"]
 stream = ExtResource("15_0dgtu")

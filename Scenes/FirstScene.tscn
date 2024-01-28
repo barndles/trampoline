@@ -1,11 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://craq5ct3x5a6j"]
+[gd_scene load_steps=10 format=3 uid="uid://b5ucam8q7xa1f"]
 
 [ext_resource type="Script" path="res://Scenes/FirstScene.gd" id="1_xd03g"]
-[ext_resource type="Texture2D" uid="uid://bc6dnn3dtvcs6" path="res://Sprites/Images/skyline.png" id="2_tek16"]
-[ext_resource type="Texture2D" uid="uid://crabfn3waud" path="res://Sprites/Images/Street.png" id="3_yqu6x"]
-[ext_resource type="Texture2D" uid="uid://d3ah1cxy5xllk" path="res://Sprites/Images/On Fire bubble anim.png" id="4_bqlm2"]
+[ext_resource type="Texture2D" uid="uid://bc6dnn3dtvcs6" path="res://Sprites/Images/Background/skyline.png" id="2_tek16"]
+[ext_resource type="Texture2D" uid="uid://crabfn3waud" path="res://Sprites/Images/Background/Street.png" id="3_yqu6x"]
+[ext_resource type="Texture2D" uid="uid://d3ah1cxy5xllk" path="res://Sprites/Images/Background/On Fire bubble anim.png" id="4_bqlm2"]
 [ext_resource type="AudioStream" uid="uid://ddmwq43hjrvvd" path="res://Sounds/The_Building_Is_On_Fire_SFX.wav" id="5_6j60i"]
-[ext_resource type="Texture2D" uid="uid://cgwhxd6wyt8v8" path="res://Sprites/Images/Rescue vehicle.png" id="6_f2urt"]
+[ext_resource type="Texture2D" uid="uid://cgwhxd6wyt8v8" path="res://Sprites/Images/Background/Rescue vehicle.png" id="6_f2urt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_upi35"]
 atlas = ExtResource("4_bqlm2")
@@ -83,8 +83,8 @@ scale = Vector2(3, 3)
 texture = ExtResource("3_yqu6x")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(930.906, 289.5)
-scale = Vector2(1.71875, 1.71875)
+position = Vector2(944, 271)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_1sr52")
 autoplay = "default"
 
