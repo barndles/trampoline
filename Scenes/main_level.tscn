@@ -23,7 +23,7 @@
 size = Vector2(219.5, 666)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqb5d"]
-size = Vector2(318, 142)
+size = Vector2(2569, 142)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1740e"]
 size = Vector2(4181, 38)
@@ -57,7 +57,7 @@ collision_mask = 2
 script = ExtResource("4_w4o1y")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Ambulance"]
-position = Vector2(-77.5, 21)
+position = Vector2(-1203, 21)
 shape = SubResource("RectangleShape2D_lqb5d")
 
 [node name="Music1" type="AudioStreamPlayer" parent="."]
