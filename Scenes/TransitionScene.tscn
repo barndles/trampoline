@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dn5ec634nxbvn"]
+[gd_scene load_steps=18 format=3 uid="uid://dn5ec634nxbvn"]
 
 [ext_resource type="Script" path="res://Scenes/TransitionScene.gd" id="1_iu16w"]
 [ext_resource type="Texture2D" uid="uid://bc6dnn3dtvcs6" path="res://Sprites/Images/Background/skyline.png" id="1_odt6e"]
@@ -14,16 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://cbkelsl8hm33d" path="res://Sprites/Images/Objects/Fire extinguisher.png" id="12_w81bu"]
 [ext_resource type="SpriteFrames" uid="uid://cdhif0v436ufv" path="res://Sprites/Images/Objects/FireExtinguisher.tres" id="13_wq4f7"]
 [ext_resource type="SpriteFrames" uid="uid://cmgcuv3wi5nhp" path="res://Sprites/brick.tres" id="14_e018t"]
-[ext_resource type="AudioStream" uid="uid://bovrtpgow4e67" path="res://Sounds/Jokes/Joke_1.wav" id="15_0dgtu"]
-[ext_resource type="Script" path="res://Scenes/VoiceLines.gd" id="15_lf4qu"]
-[ext_resource type="AudioStream" uid="uid://b3m6fh14o8i72" path="res://Sounds/Jokes/Joke_2A.wav" id="16_dxyjb"]
-[ext_resource type="AudioStream" uid="uid://cgndddyuhsc0n" path="res://Sounds/Jokes/Joke_2B.wav" id="17_p1la6"]
-[ext_resource type="AudioStream" uid="uid://bouxf8mev86o" path="res://Sounds/Jokes/Joke_3.wav" id="18_bw8pb"]
-[ext_resource type="AudioStream" uid="uid://bxqrmxjjnqcnl" path="res://Sounds/Jokes/Joke_4.wav" id="19_f0l8x"]
-[ext_resource type="AudioStream" uid="uid://t4a25bwlvqqr" path="res://Sounds/Jokes/Joke_5.wav" id="20_m5flg"]
-[ext_resource type="AudioStream" uid="uid://dlhcoorcwrppb" path="res://Sounds/Jokes/Joke_6.wav" id="21_f7m1q"]
-[ext_resource type="AudioStream" uid="uid://dk3q7u37tdo58" path="res://Sounds/Jokes/Joke_7.wav" id="22_livfu"]
-[ext_resource type="AudioStream" uid="uid://c1swduuralkj5" path="res://Sounds/Jokes/Joke_8.wav" id="23_70x57"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_upi35"]
 atlas = ExtResource("3_t3ube")
@@ -139,15 +129,15 @@ theme_override_font_sizes/normal_font_size = 40
 text = "Press \"Space\" to continue"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
-offset_left = 167.0
-offset_top = 128.0
-offset_right = 351.0
-offset_bottom = 481.0
+offset_left = 164.0
+offset_top = 144.0
+offset_right = 348.0
+offset_bottom = 497.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("7_mtmyx")
-theme_override_font_sizes/normal_font_size = 40
-text = " Victims"
+theme_override_font_sizes/normal_font_size = 28
+text = " VICTIMS"
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="RichTextLabel2"]
 position = Vector2(81, 140)
@@ -171,15 +161,15 @@ scale = Vector2(3, 3)
 sprite_frames = ExtResource("11_kvni4")
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="."]
-offset_left = 633.0
-offset_top = 127.0
-offset_right = 801.0
-offset_bottom = 485.0
+offset_left = 632.0
+offset_top = 145.0
+offset_right = 800.0
+offset_bottom = 503.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("7_mtmyx")
-theme_override_font_sizes/normal_font_size = 40
-text = "Hazards"
+theme_override_font_sizes/normal_font_size = 28
+text = "HAZARDS"
 
 [node name="Sprite2D" type="Sprite2D" parent="RichTextLabel3"]
 position = Vector2(72, 89)
@@ -197,33 +187,3 @@ position = Vector2(78, 202)
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("14_e018t")
 animation = &"Crash"
-
-[node name="Node" type="Node" parent="."]
-script = ExtResource("15_lf4qu")
-
-[node name="J1" type="AudioStreamPlayer" parent="Node"]
-stream = ExtResource("15_0dgtu")
-
-[node name="J2A" type="AudioStreamPlayer" parent="Node"]
-stream = ExtResource("16_dxyjb")
-
-[node name="J2B" type="AudioStreamPlayer" parent="Node"]
-stream = ExtResource("17_p1la6")
-
-[node name="J3" type="AudioStreamPlayer" parent="Node"]
-stream = ExtResource("18_bw8pb")
-
-[node name="J4" type="AudioStreamPlayer" parent="Node"]
-stream = ExtResource("19_f0l8x")
-
-[node name="J5" type="AudioStreamPlayer" parent="Node"]
-stream = ExtResource("20_m5flg")
-
-[node name="J6" type="AudioStreamPlayer" parent="Node"]
-stream = ExtResource("21_f7m1q")
-
-[node name="J7" type="AudioStreamPlayer" parent="Node"]
-stream = ExtResource("22_livfu")
-
-[node name="J8" type="AudioStreamPlayer" parent="Node"]
-stream = ExtResource("23_70x57")

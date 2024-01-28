@@ -16,10 +16,10 @@ func _input(event):
 		global.countdown -= 1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	update_score(global.score,global.countdown)
-	if global.countdown == 0:
-		get_tree().change_scene_to_file("res://Scenes/TransitionScene.tscn")
+#func _process(delta):
+#	update_score(global.score,global.countdown)
+#	if global.countdown == 0:
+#		get_tree().change_scene_to_file("res://Scenes/TransitionScene.tscn")
 
 func musicPlayer():
 	var track = randi_range(0,2)

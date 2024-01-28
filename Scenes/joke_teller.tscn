@@ -1,0 +1,42 @@
+[gd_scene load_steps=11 format=3 uid="uid://b5bqhvv6fy1jy"]
+
+[ext_resource type="Script" path="res://Scenes/VoiceLines.gd" id="1_p6t0x"]
+[ext_resource type="AudioStream" uid="uid://bovrtpgow4e67" path="res://Sounds/Jokes/Joke_1.wav" id="2_mrlvk"]
+[ext_resource type="AudioStream" uid="uid://b3m6fh14o8i72" path="res://Sounds/Jokes/Joke_2A.wav" id="3_oeslv"]
+[ext_resource type="AudioStream" uid="uid://cgndddyuhsc0n" path="res://Sounds/Jokes/Joke_2B.wav" id="4_5rdt0"]
+[ext_resource type="AudioStream" uid="uid://bouxf8mev86o" path="res://Sounds/Jokes/Joke_3.wav" id="5_238lf"]
+[ext_resource type="AudioStream" uid="uid://bxqrmxjjnqcnl" path="res://Sounds/Jokes/Joke_4.wav" id="6_qije1"]
+[ext_resource type="AudioStream" uid="uid://t4a25bwlvqqr" path="res://Sounds/Jokes/Joke_5.wav" id="7_anv63"]
+[ext_resource type="AudioStream" uid="uid://dlhcoorcwrppb" path="res://Sounds/Jokes/Joke_6.wav" id="8_tv56p"]
+[ext_resource type="AudioStream" uid="uid://dk3q7u37tdo58" path="res://Sounds/Jokes/Joke_7.wav" id="9_kne7s"]
+[ext_resource type="AudioStream" uid="uid://c1swduuralkj5" path="res://Sounds/Jokes/Joke_8.wav" id="10_s33ru"]
+
+[node name="Joke_Teller" type="Node"]
+script = ExtResource("1_p6t0x")
+
+[node name="J1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_mrlvk")
+
+[node name="J2A" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_oeslv")
+
+[node name="J2B" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_5rdt0")
+
+[node name="J3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_238lf")
+
+[node name="J4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_qije1")
+
+[node name="J5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_anv63")
+
+[node name="J6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_tv56p")
+
+[node name="J7" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_kne7s")
+
+[node name="J8" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_s33ru")

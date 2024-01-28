@@ -6,15 +6,15 @@
 [ext_resource type="Script" path="res://Scripts/itemspawner.gd" id="3_ofqxm"]
 [ext_resource type="AudioStream" uid="uid://bj72kqbdxoi1i" path="res://Sounds/K-9_CREW_GO.wav" id="4_fpnuq"]
 [ext_resource type="Script" path="res://Scenes/Points.gd" id="4_w4o1y"]
-[ext_resource type="Texture2D" uid="uid://crabfn3waud" path="res://Sprites/Images/Street.png" id="5_2wjcw"]
-[ext_resource type="Texture2D" uid="uid://cgwhxd6wyt8v8" path="res://Sprites/Images/Rescue vehicle.png" id="5_bqveu"]
-[ext_resource type="Texture2D" uid="uid://bc6dnn3dtvcs6" path="res://Sprites/Images/skyline.png" id="6_8f6bw"]
+[ext_resource type="Texture2D" uid="uid://crabfn3waud" path="res://Sprites/Images/Background/Street.png" id="5_2wjcw"]
+[ext_resource type="Texture2D" uid="uid://cgwhxd6wyt8v8" path="res://Sprites/Images/Background/Rescue vehicle.png" id="5_bqveu"]
+[ext_resource type="Texture2D" uid="uid://bc6dnn3dtvcs6" path="res://Sprites/Images/Background/skyline.png" id="6_8f6bw"]
 [ext_resource type="AudioStream" uid="uid://c0p5n45x2phl" path="res://Sounds/CHAOS_ATTACKS.wav" id="7_11qcq"]
 [ext_resource type="AudioStream" uid="uid://e1cpmg4c2tc3" path="res://Sounds/FIRE_FIXERS.wav" id="8_4quml"]
-[ext_resource type="Texture2D" uid="uid://bwyp8qtrv83xc" path="res://Sprites/Images/treeline01.png" id="8_riv7a"]
-[ext_resource type="Texture2D" uid="uid://13hw43kaidys" path="res://Sprites/Images/treeline02.png" id="9_4013n"]
-[ext_resource type="Texture2D" uid="uid://dqaub4pk0x3l6" path="res://Sprites/Images/treeline03.png" id="10_pvtyx"]
-[ext_resource type="Texture2D" uid="uid://du45sq56tnxmq" path="res://Sprites/Images/treeline04.png" id="11_ck7nx"]
+[ext_resource type="Texture2D" uid="uid://bwyp8qtrv83xc" path="res://Sprites/Images/Background/treeline01.png" id="8_riv7a"]
+[ext_resource type="Texture2D" uid="uid://13hw43kaidys" path="res://Sprites/Images/Background/treeline02.png" id="9_4013n"]
+[ext_resource type="Texture2D" uid="uid://dqaub4pk0x3l6" path="res://Sprites/Images/Background/treeline03.png" id="10_pvtyx"]
+[ext_resource type="Texture2D" uid="uid://du45sq56tnxmq" path="res://Sprites/Images/Background/treeline04.png" id="11_ck7nx"]
 [ext_resource type="PackedScene" uid="uid://c4u63bgcj76yl" path="res://health.tscn" id="12_rhbb1"]
 [ext_resource type="AudioStream" uid="uid://copf5rh7pgk3" path="res://Sounds/Sheet_Tear_1.wav" id="13_t5cr4"]
 [ext_resource type="FontFile" uid="uid://dbdv0matl6f8m" path="res://Sprites/Fonty/I-pixel-u.ttf" id="15_rsx2g"]
@@ -169,6 +169,7 @@ text = "0
 "
 
 [node name="Objects Left" type="RichTextLabel" parent="."]
+visible = false
 offset_left = 76.0
 offset_top = 373.0
 offset_right = 103.0

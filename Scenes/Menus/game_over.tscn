@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://brmi7yqy6hjie"]
 
-[ext_resource type="Texture2D" uid="uid://uqbu5i44bri8" path="res://Sprites/Images/GameOverScreenBG.png" id="1_2u1go"]
+[ext_resource type="Texture2D" uid="uid://uqbu5i44bri8" path="res://Sprites/Images/Background/GameOverScreenBG.png" id="1_2u1go"]
 [ext_resource type="Script" path="res://Scenes/Menus/game_over.gd" id="1_vkenx"]
 [ext_resource type="AudioStream" uid="uid://dqvljxp8lfgg3" path="res://Sounds/Game_Over.wav" id="2_vs778"]
 [ext_resource type="FontFile" uid="uid://dbdv0matl6f8m" path="res://Sprites/Fonty/I-pixel-u.ttf" id="3_gbeax"]
-[ext_resource type="Texture2D" uid="uid://cdm6je2erka0s" path="res://Sprites/Images/GAME_OVER_title.png" id="5_3mm5b"]
-[ext_resource type="Texture2D" uid="uid://dfjh48cyc1gwc" path="res://Sprites/Images/Red Cross.png" id="5_i4oim"]
+[ext_resource type="Texture2D" path="res://Sprites/Images/GAME_OVER_title.png" id="5_3mm5b"]
+[ext_resource type="Texture2D" uid="uid://dfjh48cyc1gwc" path="res://Sprites/Images/Background/Red Cross.png" id="5_i4oim"]
 
 [node name="Game Over" type="Control"]
 layout_mode = 3
@@ -21,10 +21,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.198
 anchor_bottom = 0.611
-offset_left = 357.0
-offset_top = 216.0
-offset_right = 408.904
-offset_bottom = -123.928
+offset_left = 442.0
+offset_top = 218.0
+offset_right = 493.904
+offset_bottom = -121.928
 theme_override_fonts/normal_font = ExtResource("3_gbeax")
 theme_override_font_sizes/normal_font_size = 35
 text = "SCORE:"
@@ -143,7 +143,7 @@ focus_next = NodePath("../Quit")
 focus_previous = NodePath("../Quit")
 theme_override_fonts/font = ExtResource("3_gbeax")
 theme_override_font_sizes/font_size = 30
-text = "Restart Game"
+text = "RESTART GAME"
 flat = true
 
 [node name="StartCross" type="Sprite2D" parent="VBoxContainer/Restart"]
@@ -162,7 +162,7 @@ focus_next = NodePath("../Restart")
 focus_previous = NodePath("../Restart")
 theme_override_fonts/font = ExtResource("3_gbeax")
 theme_override_font_sizes/font_size = 30
-text = "Quit"
+text = "QUIT"
 flat = true
 
 [node name="quitCross" type="Sprite2D" parent="VBoxContainer/Quit"]
