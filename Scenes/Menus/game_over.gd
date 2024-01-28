@@ -14,7 +14,11 @@ func _ready():
 	
 func update_score(score):
 	$"Score Label/Score".text = str(score)
-	
+
+func _input(event):
+	if event.is_action_pressed("quit"):
+		get_tree().quit() 
+
 func _on_restart_pressed():
 	global.lives = 5
 	global.score = 0

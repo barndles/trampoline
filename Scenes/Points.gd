@@ -14,5 +14,6 @@ func _process(delta):
 
 func _on_body_entered(body):
 	global.score += 17
+	global.countdown -= 1
 	body.queue_free()
 	print(global.score)

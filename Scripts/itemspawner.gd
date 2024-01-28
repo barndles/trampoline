@@ -29,8 +29,7 @@ func inst(pos):
 	var instance = object_select().instantiate();
 	instance.position = pos
 	add_child(instance)
-	global.countdown -= 1
-
+	
 func object_select():
 	var rng_randomization = randi_range(1,5)
 	if(rng_randomization % 2 == 1):

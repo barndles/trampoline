@@ -15,6 +15,7 @@ func _input(event):
 	if event.is_action_pressed("quit"):
 		get_tree().quit() 
 
+
 func _on_start_game_pressed():
 	$VBoxContainer/Starting.play()
 	await get_tree().create_timer(1).timeout

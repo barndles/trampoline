@@ -60,8 +60,8 @@ func _physics_process(delta):
 		else: canBounce = false
 	if (bouncing == true) and (canBounce == false):
 		#$Boing.play()
-		print("guhguhgughu")
-		
+		#print("guhguhgughu")
+		pass
 
 	#TEMPORARY SCENE RELOAD - DEBUGGING ONLY - SPACEBAR
 	if Input.is_action_just_pressed("ui_accept"):
