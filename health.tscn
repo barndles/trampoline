@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4u63bgcj76yl"]
+
+[ext_resource type="Texture2D" uid="uid://dfjh48cyc1gwc" path="res://Sprites/Images/Red Cross.png" id="1_euv2u"]
+[ext_resource type="Script" path="res://health.gd" id="2_j7rlq"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("2_j7rlq")
+
+[node name="RedCross1" type="Sprite2D" parent="."]
+position = Vector2(48, 46)
+scale = Vector2(6, 6)
+texture = ExtResource("1_euv2u")
+
+[node name="RedCross2" type="Sprite2D" parent="."]
+position = Vector2(108, 46)
+scale = Vector2(6, 6)
+texture = ExtResource("1_euv2u")
+
+[node name="RedCross3" type="Sprite2D" parent="."]
+position = Vector2(169, 46)
+scale = Vector2(6, 6)
+texture = ExtResource("1_euv2u")
+
+[node name="RedCross4" type="Sprite2D" parent="."]
+position = Vector2(230, 46)
+scale = Vector2(6, 6)
+texture = ExtResource("1_euv2u")
+
+[node name="RedCross5" type="Sprite2D" parent="."]
+position = Vector2(290, 46)
+scale = Vector2(6, 6)
+texture = ExtResource("1_euv2u")
