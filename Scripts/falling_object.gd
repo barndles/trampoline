@@ -79,5 +79,5 @@ func _on_body_entered(body):
 	print(global.lives)
 	$Smack.play()
 	if (global.lives <= 0):
-		get_tree().quit()
+		get_tree().change_scene_to_file("res://Scenes/Menus/game_over.tscn")
 

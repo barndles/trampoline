@@ -6,8 +6,8 @@
 [ext_resource type="FontFile" uid="uid://dbdv0matl6f8m" path="res://Sprites/Fonty/I-pixel-u.ttf" id="2_d5iy1"]
 [ext_resource type="AudioStream" uid="uid://qogqcxo7luam" path="res://Sounds/K-9_KATCHERS_Title_SFX.wav" id="4_scclo"]
 [ext_resource type="SpriteFrames" uid="uid://daffr3rbvi5k4" path="res://Sprites/Menu_Logo.tres" id="5_c1pj4"]
-[ext_resource type="Texture2D" uid="uid://dhj0hhtqh3iqg" path="res://Sprites/Images/Red Cross.png" id="7_ygqiu"]
-[ext_resource type="Texture2D" uid="uid://b3ue88corq4x2" path="res://Sprites/Images/TitleScreenBG.png" id="8_dnfsy"]
+[ext_resource type="Texture2D" uid="uid://dfjh48cyc1gwc" path="res://Sprites/Images/Red Cross.png" id="7_ygqiu"]
+[ext_resource type="Texture2D" uid="uid://dgccjncwuvwgi" path="res://Sprites/Images/TitleScreenBG.png" id="8_dnfsy"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -95,8 +95,8 @@ autoplay = "default"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -3
-position = Vector2(569, 347)
-scale = Vector2(1.04579, 1.08179)
+position = Vector2(576.313, 326.25)
+scale = Vector2(0.999457, 1.0054)
 texture = ExtResource("8_dnfsy")
 
 [connection signal="focus_entered" from="VBoxContainer/Start Game" to="." method="_on_start_game_focus_entered"]
