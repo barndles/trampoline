@@ -8,19 +8,113 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_isqrd"]
 size = Vector2(48, 45.5)
 
+<<<<<<< Updated upstream
 [node name="FallingObject" type="RigidBody2D"]
+=======
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrhxv"]
+atlas = ExtResource("2_pg7u3")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lnhh"]
+atlas = ExtResource("2_pg7u3")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mw8eo"]
+atlas = ExtResource("2_pg7u3")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2s0l"]
+atlas = ExtResource("2_pg7u3")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tbpa"]
+atlas = ExtResource("2_pg7u3")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_le01g"]
+atlas = ExtResource("2_pg7u3")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2b16"]
+atlas = ExtResource("2_pg7u3")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xixj8"]
+atlas = ExtResource("3_0k7gg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y14vp"]
+atlas = ExtResource("3_0k7gg")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1n8nk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvoxy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xrhxv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0lnhh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mw8eo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2s0l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4tbpa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_le01g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2b16")
+}],
+"loop": false,
+"name": &"Crash",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xixj8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y14vp")
+}],
+"loop": true,
+"name": &"Falling",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rl8kt"]
+size = Vector2(34.8, 38.4)
+
+[node name="FallingGrandpa" type="RigidBody2D"]
+>>>>>>> Stashed changes
 collision_layer = 2
 collision_mask = 8
 lock_rotation = true
-continuous_cd = 2
+continuous_cd = 1
 max_contacts_reported = 5
 contact_monitor = true
 script = ExtResource("1_t5hf7")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+<<<<<<< Updated upstream
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("2_xmypg")
 animation = &"Crash"
+=======
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_1n8nk")
+animation = &"Crash"
+frame = 7
+frame_progress = 1.0
+>>>>>>> Stashed changes
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1.25)
