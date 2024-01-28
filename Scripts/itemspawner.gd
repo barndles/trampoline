@@ -12,6 +12,8 @@ var spawn_points = [Vector2(831,307),Vector2(959,307),Vector2(1087,307),Vector2(
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	wait_seconds_to_spawn()
+	await get_tree().create_timer(30.0).timeout
+	wait_seconds_to_spawn()
 
 func wait_seconds_to_spawn():
 	var rng_location = randi_range(0,5)
