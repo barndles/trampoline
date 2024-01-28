@@ -36,6 +36,8 @@ stream = ExtResource("4_smksa")
 volume_db = 2.6
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_w4bo8")

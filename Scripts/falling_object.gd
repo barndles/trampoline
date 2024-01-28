@@ -81,3 +81,7 @@ func _on_body_entered(body):
 		await get_tree().create_timer(1).timeout
 		get_tree().change_scene_to_file("res://Scenes/Menus/game_over.tscn")
 
+
+
+func _on_area_2d_area_entered(area):
+	pass # Replace with function body.

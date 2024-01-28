@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dcbd52xa2lok"]
+[gd_scene load_steps=9 format=3 uid="uid://dcbd52xa2lok"]
 
 [ext_resource type="Texture2D" uid="uid://dv5vwebe2bhb8" path="res://Sprites/Images/building_f1_alt.PNG" id="1_gptkv"]
 [ext_resource type="Texture2D" uid="uid://bwu7bckcr81is" path="res://Sprites/Images/Fire.png" id="2_i8ykt"]
 [ext_resource type="Texture2D" uid="uid://p4dfjl6av4ah" path="res://Sprites/Images/Signs/sign-petshop.PNG" id="3_d143r"]
+[ext_resource type="PackedScene" uid="uid://cpi22ailrsc1c" path="res://Window.tscn" id="4_hclhr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jaylc"]
 atlas = ExtResource("2_i8ykt")
@@ -16,7 +17,7 @@ region = Rect2(32, 0, 32, 48)
 atlas = ExtResource("2_i8ykt")
 region = Rect2(64, 0, 32, 48)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_j7nyd"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_ybr0r"]
 resource_local_to_scene = true
 animations = [{
 "frames": [{
@@ -40,24 +41,41 @@ animations = [{
 scale = Vector2(2, 2)
 texture = ExtResource("1_gptkv")
 
-[node name="Fire_Left" type="AnimatedSprite2D" parent="."]
-position = Vector2(-127, 7)
-scale = Vector2(1.71875, 1.71875)
-sprite_frames = SubResource("SpriteFrames_j7nyd")
-autoplay = "default"
-
-[node name="Fire_Left2" type="AnimatedSprite2D" parent="."]
-position = Vector2(0.999985, 7)
-scale = Vector2(1.71875, 1.71875)
-sprite_frames = SubResource("SpriteFrames_j7nyd")
-autoplay = "default"
-
-[node name="Fire_Left3" type="AnimatedSprite2D" parent="."]
-position = Vector2(130, 7)
-scale = Vector2(1.71875, 1.71875)
-sprite_frames = SubResource("SpriteFrames_j7nyd")
-autoplay = "default"
-
 [node name="PetSign" type="Sprite2D" parent="."]
 position = Vector2(0, -97)
 texture = ExtResource("3_d143r")
+
+[node name="Fires" type="Node2D" parent="."]
+position = Vector2(-127, 0)
+
+[node name="Fire_Left" type="AnimatedSprite2D" parent="Fires"]
+position = Vector2(0, 7)
+scale = Vector2(1.71875, 1.71875)
+sprite_frames = SubResource("SpriteFrames_ybr0r")
+autoplay = "default"
+
+[node name="Area2D" parent="Fires" instance=ExtResource("4_hclhr")]
+collision_mask = 5
+
+[node name="Fires_Center" type="Node2D" parent="."]
+
+[node name="Fire_Left" type="AnimatedSprite2D" parent="Fires_Center"]
+position = Vector2(0, 7)
+scale = Vector2(1.71875, 1.71875)
+sprite_frames = SubResource("SpriteFrames_ybr0r")
+autoplay = "default"
+
+[node name="Area2D2" parent="Fires_Center" instance=ExtResource("4_hclhr")]
+collision_mask = 5
+
+[node name="Fires_Right" type="Node2D" parent="."]
+position = Vector2(127, 0)
+
+[node name="Fire_Left" type="AnimatedSprite2D" parent="Fires_Right"]
+position = Vector2(0, 7)
+scale = Vector2(1.71875, 1.71875)
+sprite_frames = SubResource("SpriteFrames_ybr0r")
+autoplay = "default"
+
+[node name="Area2D2" parent="Fires_Right" instance=ExtResource("4_hclhr")]
+collision_mask = 5

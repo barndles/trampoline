@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://cpi22ailrsc1c"]
+
+[ext_resource type="Script" path="res://Scenes/buildings/windowbreak.gd" id="1_5l6in"]
+[ext_resource type="Texture2D" uid="uid://dap6ivxb15tn4" path="res://Sprites/Images/windows.png" id="2_l5xq6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ajlvr"]
+size = Vector2(64, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ig8ao"]
+atlas = ExtResource("2_l5xq6")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13rod"]
+atlas = ExtResource("2_l5xq6")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8dlm7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ig8ao")
+}],
+"loop": true,
+"name": &"Broken",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13rod")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_5l6in")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_ajlvr")
+
+[node name="Window" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_8dlm7")
+
+[connection signal="area_entered" from="." to="." method="on_window_entered"]
