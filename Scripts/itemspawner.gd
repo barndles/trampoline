@@ -4,11 +4,11 @@ extends Node
 @onready var last_spawn = 0
 @onready var global = get_node("/root/Autoload")
 
-var obj_good = [preload("res://Scenes/falling_object.tscn"), preload("res://Scenes/Falling_Grandpa.tscn"),preload("res://Scenes/Falling_Cat.tscn"),preload("res://Scenes/Falling_Computer.tscn")]
-var obj_bad = [preload("res://Scenes/Falling_Bricks.tscn"), preload("res://Scenes/Fire_extinguisher.tscn"),preload("res://Scenes/Molotov.tscn"),preload("res://Scenes/Falling_Taco.tscn")]
-var help_bubble = preload("res://Scenes/help_bubble.tscn")
-var window_breaker = preload("res://Scenes/windowbreaker.tscn")
-var spawn_points = [Vector2(831,307),Vector2(959,307),Vector2(1087,307),Vector2(831,130),Vector2(959,130),Vector2(1087,130)]
+@onready var obj_good = [preload("res://Scenes/falling_object.tscn"), preload("res://Scenes/Falling_Grandpa.tscn"),preload("res://Scenes/Falling_Cat.tscn"),preload("res://Scenes/Falling_Computer.tscn")]
+@onready var obj_bad = [preload("res://Scenes/Falling_Bricks.tscn"), preload("res://Scenes/Fire_extinguisher.tscn"),preload("res://Scenes/Molotov.tscn"),preload("res://Scenes/Falling_Taco.tscn")]
+@onready var help_bubble = preload("res://Scenes/help_bubble.tscn")
+@onready var window_breaker = preload("res://Scenes/windowbreaker.tscn")
+@onready var spawn_points = [Vector2(831,307),Vector2(959,307),Vector2(1087,307),Vector2(831,130),Vector2(959,130),Vector2(1087,130)]
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	wait_seconds_to_spawn()
