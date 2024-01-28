@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://13hw43kaidys" path="res://Sprites/Images/treeline02.png" id="9_4013n"]
 [ext_resource type="Texture2D" uid="uid://dqaub4pk0x3l6" path="res://Sprites/Images/treeline03.png" id="10_pvtyx"]
 [ext_resource type="Texture2D" uid="uid://du45sq56tnxmq" path="res://Sprites/Images/treeline04.png" id="11_ck7nx"]
-[ext_resource type="PackedScene" path="res://health.tscn" id="12_rhbb1"]
+[ext_resource type="PackedScene" uid="uid://c4u63bgcj76yl" path="res://health.tscn" id="12_rhbb1"]
 [ext_resource type="AudioStream" uid="uid://copf5rh7pgk3" path="res://Sounds/Sheet_Tear_1.wav" id="13_t5cr4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dc8k6"]
