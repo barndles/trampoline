@@ -101,6 +101,7 @@ position = Vector2(960.525, 468)
 position = Vector2(198, 561)
 
 [node name="TESTNODE" type="Node2D" parent="."]
+position = Vector2(1, 1)
 script = ExtResource("3_ofqxm")
 
 [node name="Area2D" type="StaticBody2D" parent="."]

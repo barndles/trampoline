@@ -4,7 +4,7 @@ extends Node
 @onready var last_spawn = 0
 @onready var global = get_node("/root/Autoload")
 
-@onready var obj_good = [preload("res://Scenes/falling_object.tscn"), preload("res://Scenes/Falling_Grandpa.tscn"),preload("res://Scenes/Falling_Cat.tscn"),preload("res://Scenes/Falling_Computer.tscn")]
+@onready var obj_good = [preload("res://Scenes/falling_object.tscn"), preload("res://Scenes/falling_grandpa.tscn"),preload("res://Scenes/Falling_Cat.tscn"),preload("res://Scenes/Falling_Computer.tscn")]
 @onready var obj_bad = [preload("res://Scenes/Falling_Bricks.tscn"), preload("res://Scenes/Fire_extinguisher.tscn"),preload("res://Scenes/Molotov.tscn"),preload("res://Scenes/Falling_Taco.tscn")]
 @onready var help_bubble = preload("res://Scenes/help_bubble.tscn")
 @onready var window_breaker = preload("res://Scenes/windowbreaker.tscn")
@@ -12,9 +12,6 @@ extends Node
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	wait_seconds_to_spawn()
-	#await get_tree().create_timer(120.0).timeout
-	#wait_seconds_to_spawn()
-	#the locked hard mode :3
 
 
 func wait_seconds_to_spawn():
