@@ -5,7 +5,7 @@ extends Node
 @onready var global = get_node("/root/Autoload")
 
 var obj_good = [preload("res://Scenes/falling_object.tscn"), preload("res://Scenes/Falling_Grandpa.tscn"),preload("res://Scenes/Falling_Cat.tscn")]
-var obj_bad = [preload("res://Scenes/Falling_Bricks.tscn"), preload("res://Scenes/Fire_extinguisher.tscn")]
+var obj_bad = [preload("res://Scenes/Falling_Bricks.tscn"), preload("res://Scenes/Fire_extinguisher.tscn"),preload("res://Scenes/Molotov.tscn")]
 var help_bubble = preload("res://Scenes/help_bubble.tscn")
 var window_breaker = preload("res://Scenes/windowbreaker.tscn")
 var spawn_points = [Vector2(831,307),Vector2(959,307),Vector2(1087,307),Vector2(831,130),Vector2(959,130),Vector2(1087,130)]
@@ -40,7 +40,7 @@ func object_select():
 	if(rng_randomization % 2 == 1):
 		return obj_good[randi_range(0,2)]
 	if(rng_randomization % 2 == 0):
-		return obj_bad[randi_range(0,1)]
+		return obj_bad[randi_range(0,2)]
 
 func inst_bubble(pos, time):
 	var instance = help_bubble.instantiate();
