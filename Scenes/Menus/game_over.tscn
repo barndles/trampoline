@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=6 format=3 uid="uid://brmi7yqy6hjie"]
+=======
+[gd_scene load_steps=4 format=3 uid="uid://chyft4kkjdefv"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Texture2D" uid="uid://uqbu5i44bri8" path="res://Sprites/Images/GameOverScreenBG.png" id="1_2u1go"]
 [ext_resource type="Script" path="res://Scenes/Menus/game_over.gd" id="1_vkenx"]
