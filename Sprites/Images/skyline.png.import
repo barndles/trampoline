@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1i0xqih7xhjm"
-path="res://.godot/imported/Red Cross.png-957ddd92a870da261412dedcd4df8f44.ctex"
+uid="uid://bc6dnn3dtvcs6"
+path="res://.godot/imported/skyline.png-8279e5988812c7979765339ed9f7c12c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Red Cross.png"
-dest_files=["res://.godot/imported/Red Cross.png-957ddd92a870da261412dedcd4df8f44.ctex"]
+source_file="res://Sprites/Images/skyline.png"
+dest_files=["res://.godot/imported/skyline.png-8279e5988812c7979765339ed9f7c12c.ctex"]
 
 [params]
 

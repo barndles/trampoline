@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dn5ec634nxbvn"]
 
-[ext_resource type="Texture2D" uid="uid://bc6dnn3dtvcs6" path="res://Sprites/Images/Background/skyline.png" id="1_odt6e"]
-[ext_resource type="Texture2D" uid="uid://crabfn3waud" path="res://Sprites/Images/Background/Street.png" id="2_okj7l"]
+[ext_resource type="Texture2D" uid="uid://bc6dnn3dtvcs6" path="res://Sprites/Images/skyline.png" id="1_odt6e"]
+[ext_resource type="Texture2D" uid="uid://crabfn3waud" path="res://Sprites/Images/Street.png" id="2_okj7l"]
 
 [node name="TransitionScene" type="Node2D"]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1i0xqih7xhjm"
-path="res://.godot/imported/Red Cross.png-957ddd92a870da261412dedcd4df8f44.ctex"
+uid="uid://gpv0uu60subx"
+path="res://.godot/imported/Help bubble anim.png-5fbd64c1efb5d67220ee207a05faa9d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Red Cross.png"
-dest_files=["res://.godot/imported/Red Cross.png-957ddd92a870da261412dedcd4df8f44.ctex"]
+source_file="res://Sprites/Images/Help bubble anim.png"
+dest_files=["res://.godot/imported/Help bubble anim.png-5fbd64c1efb5d67220ee207a05faa9d5.ctex"]
 
 [params]
 

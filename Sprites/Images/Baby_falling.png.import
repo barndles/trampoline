@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1i0xqih7xhjm"
-path="res://.godot/imported/Red Cross.png-957ddd92a870da261412dedcd4df8f44.ctex"
+uid="uid://cmtd571gcpr2s"
+path="res://.godot/imported/Baby_falling.png-4d8f240674dd6ef0d473fbf1636a6e0a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Red Cross.png"
-dest_files=["res://.godot/imported/Red Cross.png-957ddd92a870da261412dedcd4df8f44.ctex"]
+source_file="res://Sprites/Images/Baby_falling.png"
+dest_files=["res://.godot/imported/Baby_falling.png-4d8f240674dd6ef0d473fbf1636a6e0a.ctex"]
 
 [params]
 

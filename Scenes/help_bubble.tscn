@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cnd1pmakxysew"]
 
-[ext_resource type="Texture2D" uid="uid://gpv0uu60subx" path="res://Sprites/Images/UI/Help bubble anim.png" id="1_nfms0"]
+[ext_resource type="Texture2D" uid="uid://gpv0uu60subx" path="res://Sprites/Images/Help bubble anim.png" id="1_nfms0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d424k"]
 atlas = ExtResource("1_nfms0")

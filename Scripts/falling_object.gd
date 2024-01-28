@@ -49,9 +49,15 @@ func _process(delta):
 func _physics_process(delta):
 	if (fallingObject.linear_velocity.y > 0):
 		animatedSprite.play("Falling")
-	if (fallingObject.position.y > trampolineHeight):
-		animatedSprite.play("Crash")
-		global.lives -= 1
+	if (fallingObject.position.y > trampolineHeight) and canBounce:
+		bouncing = true
+		canBounce = false
+		fallingObject.linear_velocity = Vector2(0, 0)
+		fallingObject.apply_impulse(Vector2(bounceAngle.x, trampolineTightness * -400))
+	if (fallingObject.position.y < trampolineHeight):
+		if (fallingObject.position.x > player1.global_position.x) and (fallingObject.position.x < player2.global_position.x):
+			canBounce = true
+		else: canBounce = false
 	if (bouncing == true and canBounce == false):
 		$Boing.play()
 		
@@ -63,8 +69,13 @@ func _physics_process(delta):
 
 
 func _on_body_entered(body):
-	
+	global.lives -= 1
+	print("ouch")
 	animatedSprite.play("Crash")
 	fallingObject.sleeping = true
+	print(global.lives)
 	$Smack.play()
+	if (global.lives <= 0):
+		await get_tree().create_timer(1).timeout
+		get_tree().change_scene_to_file("res://Scenes/Menus/game_over.tscn")
 
