@@ -16,6 +16,7 @@ func _input(event):
 func _process(delta):
 	if points < global.score:
 		get_node("RescueVehicle").play("bounce")
+		get_node("RescueVehicle/scored").play()
 		points = global.score
 	#update_score(global.score,global.countdown)
 #	if global.countdown == 0:

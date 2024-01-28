@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cdd4crv7gyydl"]
+[gd_scene load_steps=32 format=3 uid="uid://cdd4crv7gyydl"]
 
 [ext_resource type="PackedScene" uid="uid://c4wayj2esb4on" path="res://Scenes/player1.tscn" id="1_3kmge"]
 [ext_resource type="Script" path="res://Scenes/main_level.gd" id="1_7h415"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://c4u63bgcj76yl" path="res://health.tscn" id="12_rhbb1"]
 [ext_resource type="AudioStream" uid="uid://copf5rh7pgk3" path="res://Sounds/Sheet_Tear_1.wav" id="13_t5cr4"]
 [ext_resource type="Texture2D" uid="uid://cjqp4hsfrov3c" path="res://Sprites/Images/Background/Rescue vehicle v2.png" id="13_vmlyt"]
+[ext_resource type="AudioStream" uid="uid://ba730qadoe3fj" path="res://Sounds/Saved_SFX_01.wav" id="14_es6hn"]
 [ext_resource type="FontFile" uid="uid://dbdv0matl6f8m" path="res://Sprites/Fonty/I-pixel-u.ttf" id="15_rsx2g"]
 [ext_resource type="PackedScene" uid="uid://b5bqhvv6fy1jy" path="res://Scenes/joke_teller.tscn" id="19_6hkgj"]
 [ext_resource type="Script" path="res://Scenes/Score.gd" id="19_w64bi"]
@@ -183,6 +184,9 @@ position = Vector2(96, 539)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_5m7y2")
 animation = &"bounce"
+
+[node name="scored" type="AudioStreamPlayer" parent="RescueVehicle"]
+stream = ExtResource("14_es6hn")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 8
