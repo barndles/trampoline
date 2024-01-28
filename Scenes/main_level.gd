@@ -1,7 +1,7 @@
 extends Node2D
 @onready var global = get_node("/root/Autoload")
 
-var points = global.score
+var points = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
