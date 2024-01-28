@@ -1,6 +1,6 @@
 extends Node
 
-@onready var resetTime = 0
+@onready var resetTime = 0.0
 @onready var last_spawn = 0
 @onready var global = get_node("/root/Autoload")
 
@@ -18,11 +18,12 @@ func wait_seconds_to_spawn():
 	while(rng_location == last_spawn):
 		rng_location = randi_range(0,5)
 	last_spawn = rng_location
-	var rng_timer = randf_range(3.0,8.0)
+	var rng_timer = randf_range(3.0,(8.0-resetTime))
 	inst_bubble(spawn_points[rng_location] - Vector2(50,20), rng_timer)
 	await get_tree().create_timer(rng_timer).timeout
 	inst(spawn_points[rng_location])
-	resetTime = resetTime + 1
+	if(resetTime >= 5):
+		resetTime += (rng_timer / 10)
 	wait_seconds_to_spawn()
 
 func inst(pos):
