@@ -23,6 +23,7 @@ var distanceToP2
 var trampolineTightness
 var explode = true
 
+@onready var flasher = $flasher
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -46,9 +47,7 @@ func _process(delta):
 	#if(fallingObject)
 	if fallingObject.z_index != 0: queue_free()
 	
-	if (global.lives <= 0):
-		await get_tree().create_timer(1).timeout
-		get_tree().change_scene_to_file("res://Scenes/Menus/game_over.tscn")
+
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -59,16 +58,19 @@ func _physics_process(delta):
 			global.lives -= 1
 			explode = false
 			animatedSprite.play("Crash")
+			flasher.stop()
 			fallingObject.linear_velocity = Vector2(0, -100)
 	if (fallingObject.position.y < trampolineHeight):
 		if (fallingObject.position.x > player1.global_position.x) and (fallingObject.position.x < player2.global_position.x):
 			canBounce = true
 		else: canBounce = false
 
+
 	#TEMPORARY SCENE RELOAD - DEBUGGING ONLY - SPACEBAR
 	if Input.is_action_just_pressed("ui_accept"):
 		global.lives = 5
 		get_tree().reload_current_scene()
+	if Input.is_action_just_pressed("ui_down"): global.lives -= 1
 
 
 

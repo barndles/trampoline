@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cawcufffbxgqk"]
+[gd_scene load_steps=7 format=3 uid="uid://cawcufffbxgqk"]
 
 [ext_resource type="Script" path="res://Scripts/falling_hazard.gd" id="1_e4vp1"]
 [ext_resource type="SpriteFrames" uid="uid://cmgcuv3wi5nhp" path="res://Sprites/brick.tres" id="2_qbkqu"]
 [ext_resource type="AudioStream" uid="uid://c2bly7rytx30i" path="res://Sounds/Floor_Smack_1.wav" id="3_xhu60"]
 [ext_resource type="AudioStream" uid="uid://dkhuh83oj88di" path="res://Sounds/Sheet_Bounce_1.wav" id="4_xlwb3"]
+[ext_resource type="PackedScene" uid="uid://cmtiplo67875e" path="res://Scenes/flasher.tscn" id="5_23ge3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_isqrd"]
 size = Vector2(48, 45.5)
@@ -32,5 +33,7 @@ stream = ExtResource("3_xhu60")
 [node name="Boing" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_xlwb3")
 volume_db = 2.6
+
+[node name="flasher" parent="." instance=ExtResource("5_23ge3")]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
