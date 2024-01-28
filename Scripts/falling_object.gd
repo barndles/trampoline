@@ -44,6 +44,7 @@ func _process(delta):
 	#baby landing (badly)
 	#if(fallingObject)
 	if fallingObject.z_index != 0: queue_free()
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	if (fallingObject.linear_velocity.y > 0):
@@ -61,13 +62,9 @@ func _physics_process(delta):
 		$Boing.play()
 		
 
-	
-	
-	
 	#TEMPORARY SCENE RELOAD - DEBUGGING ONLY - SPACEBAR
 	if Input.is_action_just_pressed("ui_accept"):
 		get_tree().reload_current_scene()
-
 
 
 
