@@ -1,10 +1,10 @@
 extends Node
 
-@onready var resetTime = 0.0
+@onready var resetTime = 0
 @onready var last_spawn = 0
 @onready var global = get_node("/root/Autoload")
 
-var obj_good = [preload("res://Scenes/falling_object.tscn"), preload("res://Scenes/Falling_Grandpa.tscn"),preload("res://Scenes/Falling_Cat.tscn"),preload("res://Scenes/Falling_Hamster.tscn")]
+var obj_good = [preload("res://Scenes/falling_object.tscn"), preload("res://Scenes/Falling_Grandpa.tscn"),preload("res://Scenes/Falling_Cat.tscn")]
 var obj_bad = [preload("res://Scenes/Falling_Bricks.tscn"), preload("res://Scenes/Fire_extinguisher.tscn")]
 var help_bubble = preload("res://Scenes/help_bubble.tscn")
 var window_breaker = preload("res://Scenes/windowbreaker.tscn")
@@ -18,12 +18,11 @@ func wait_seconds_to_spawn():
 	while(rng_location == last_spawn):
 		rng_location = randi_range(0,5)
 	last_spawn = rng_location
-	var rng_timer = randf_range(3.0,(8.0-resetTime))
+	var rng_timer = randf_range(3.0,8.0)
 	inst_bubble(spawn_points[rng_location] - Vector2(50,20), rng_timer)
 	await get_tree().create_timer(rng_timer).timeout
 	inst(spawn_points[rng_location])
-	if(resetTime < 5.0):
-		resetTime += 0.1
+	resetTime = resetTime + 1
 	wait_seconds_to_spawn()
 
 func inst(pos):
@@ -39,7 +38,7 @@ func inst(pos):
 func object_select():
 	var rng_randomization = randi_range(1,5)
 	if(rng_randomization % 2 == 1):
-		return obj_good[randi_range(0,3)]
+		return obj_good[randi_range(0,2)]
 	if(rng_randomization % 2 == 0):
 		return obj_bad[randi_range(0,1)]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhbcr21db0y6f"
-path="res://.godot/imported/hamster.png-04f01b8a6b4b736de025c3f16d9ecf2d.ctex"
+uid="uid://cjqp4hsfrov3c"
+path="res://.godot/imported/Rescue vehicle v2.png-05db7178171c1aabfff4c9b24b6a1614.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Images/throwingObjects/hamster.png"
-dest_files=["res://.godot/imported/hamster.png-04f01b8a6b4b736de025c3f16d9ecf2d.ctex"]
+source_file="res://Sprites/Images/Background/Rescue vehicle v2.png"
+dest_files=["res://.godot/imported/Rescue vehicle v2.png-05db7178171c1aabfff4c9b24b6a1614.ctex"]
 
 [params]
 
