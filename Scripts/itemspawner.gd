@@ -5,7 +5,6 @@ var help_bubble = preload("res://Scenes/help_bubble.tscn")
 var spawn_points = [Vector2(831,307),Vector2(959,307),Vector2(1087,307),Vector2(831,130),Vector2(959,130),Vector2(1087,130)]
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	inst(spawn_points[0])
 	wait_seconds_to_spawn()
 
 func wait_seconds_to_spawn():
