@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://hmj8y50p585r"
-=======
-uid="uid://bdjdlpg86qtll"
->>>>>>> f5c362d6ebcd2c946a082a5b6f5ec449866b7fd2
-path="res://.godot/imported/treeline04.png-13e4805553345d7baaf67936c0f6f56e.ctex"
+uid="uid://b3ue88corq4x2"
+path="res://.godot/imported/TitleScreenBG.png-22380b02306ef16da8d372f34271bb0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Images/treeline04.png"
-dest_files=["res://.godot/imported/treeline04.png-13e4805553345d7baaf67936c0f6f56e.ctex"]
+source_file="res://Sprites/Images/TitleScreenBG.png"
+dest_files=["res://.godot/imported/TitleScreenBG.png-22380b02306ef16da8d372f34271bb0c.ctex"]
 
 [params]
 
