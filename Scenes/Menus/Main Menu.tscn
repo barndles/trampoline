@@ -39,7 +39,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_d5iy1")
 theme_override_font_sizes/font_size = 30
-text = "Start Game"
+text = "START GAME"
 flat = true
 
 [node name="startCross" type="Sprite2D" parent="VBoxContainer/Start Game"]
@@ -53,7 +53,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_d5iy1")
 theme_override_font_sizes/font_size = 30
-text = "Settings"
+text = "CREDITS"
 flat = true
 
 [node name="setCross" type="Sprite2D" parent="VBoxContainer/Settings"]
@@ -67,7 +67,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_d5iy1")
 theme_override_font_sizes/font_size = 30
-text = "Quit "
+text = "QUIT"
 flat = true
 
 [node name="quitCross" type="Sprite2D" parent="VBoxContainer/Quit"]
