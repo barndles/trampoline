@@ -1,5 +1,6 @@
 extends Node
 
+@onready var resetTime = 0
 var thrown_object = preload("res://Scenes/falling_object.tscn")
 var help_bubble = preload("res://Scenes/help_bubble.tscn")
 var spawn_points = [Vector2(831,307),Vector2(959,307),Vector2(1087,307),Vector2(831,130),Vector2(959,130),Vector2(1087,130)]
@@ -12,8 +13,12 @@ func wait_seconds_to_spawn():
 	var rng_timer = randf_range(3.0,8.0)
 	inst_bubble(spawn_points[rng_location] - Vector2(50,20), rng_timer)
 	await get_tree().create_timer(rng_timer).timeout
-	inst(spawn_points[rng_location]) 
-	wait_seconds_to_spawn()
+	inst(spawn_points[rng_location])
+	resetTime = resetTime + 1
+	if(resetTime >= 5):
+		pass
+	else: 
+		wait_seconds_to_spawn()
 
 func inst(pos):
 	var instance = thrown_object.instantiate();
