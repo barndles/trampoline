@@ -5,6 +5,10 @@ extends Control
 func _ready():
 	$VBoxContainer/Restart.grab_focus()
 	update_score(global.score)
+	if global.score < 69:
+		$hater.show()
+	if global.score > 70:
+		$"Cool Guy".show()
 	
 func update_score(score):
 	$"Score Label/Score".text = str(score)

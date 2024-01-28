@@ -53,6 +53,7 @@ position = Vector2(566, 132)
 texture = ExtResource("5_3mm5b")
 
 [node name="hater" type="RichTextLabel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -69,6 +70,28 @@ theme_override_fonts/normal_font = ExtResource("3_gbeax")
 theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
 text = "Wow, you [shake rate=50 level=10]REALLY[/shake] hate babies"
+shortcut_keys_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="Cool Guy" type="RichTextLabel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -211.0
+offset_top = -26.0
+offset_right = 331.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("3_gbeax")
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+text = "You're a [shake rate=50 level=10]\"good\"[/shake] person"
 shortcut_keys_enabled = false
 deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
@@ -102,7 +125,7 @@ flat = true
 
 [node name="StartCross" type="Sprite2D" parent="VBoxContainer/Restart"]
 visible = false
-position = Vector2(49, 21.25)
+position = Vector2(58, 27)
 scale = Vector2(3.75, 3.5625)
 texture = ExtResource("5_i4oim")
 
@@ -121,7 +144,7 @@ flat = true
 
 [node name="quitCross" type="Sprite2D" parent="VBoxContainer/Quit"]
 visible = false
-position = Vector2(102, 30)
+position = Vector2(125, 26)
 scale = Vector2(3.375, 3.375)
 texture = ExtResource("5_i4oim")
 

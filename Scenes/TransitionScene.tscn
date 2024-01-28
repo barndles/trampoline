@@ -1,13 +1,42 @@
-[gd_scene load_steps=3 format=3 uid="uid://dn5ec634nxbvn"]
+[gd_scene load_steps=10 format=3 uid="uid://dn5ec634nxbvn"]
 
+[ext_resource type="Script" path="res://Scenes/TransitionScene.gd" id="1_iu16w"]
 [ext_resource type="Texture2D" uid="uid://bc6dnn3dtvcs6" path="res://Sprites/Images/skyline.png" id="1_odt6e"]
 [ext_resource type="Texture2D" uid="uid://crabfn3waud" path="res://Sprites/Images/Street.png" id="2_okj7l"]
+[ext_resource type="Texture2D" uid="uid://d3ah1cxy5xllk" path="res://Sprites/Images/On Fire bubble anim.png" id="3_t3ube"]
+[ext_resource type="AudioStream" uid="uid://ddmwq43hjrvvd" path="res://Sounds/The_Building_Is_On_Fire_SFX.wav" id="4_us28v"]
+[ext_resource type="Texture2D" uid="uid://cgwhxd6wyt8v8" path="res://Sprites/Images/Rescue vehicle.png" id="5_0f7pr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_upi35"]
+atlas = ExtResource("3_t3ube")
+region = Rect2(0, 0, 42, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjegr"]
+atlas = ExtResource("3_t3ube")
+region = Rect2(42, 0, 42, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1sr52"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_upi35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjegr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="TransitionScene" type="Node2D"]
+script = ExtResource("1_iu16w")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(12, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(260, 257)
@@ -52,3 +81,18 @@ texture = ExtResource("2_okj7l")
 position = Vector2(1054, 535)
 scale = Vector2(3, 3)
 texture = ExtResource("2_okj7l")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(930.906, 289.5)
+scale = Vector2(1.71875, 1.71875)
+sprite_frames = SubResource("SpriteFrames_1sr52")
+autoplay = "default"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sprite2D"]
+stream = ExtResource("4_us28v")
+autoplay = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(79, 479)
+scale = Vector2(2.45313, 2.45313)
+texture = ExtResource("5_0f7pr")
