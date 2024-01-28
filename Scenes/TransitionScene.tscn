@@ -1,10 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://dn5ec634nxbvn"]
+[gd_scene load_steps=19 format=3 uid="uid://dn5ec634nxbvn"]
 
 [ext_resource type="Script" path="res://Scenes/TransitionScene.gd" id="1_iu16w"]
 [ext_resource type="Texture2D" uid="uid://bc6dnn3dtvcs6" path="res://Sprites/Images/skyline.png" id="1_odt6e"]
 [ext_resource type="Texture2D" uid="uid://crabfn3waud" path="res://Sprites/Images/Street.png" id="2_okj7l"]
 [ext_resource type="Texture2D" uid="uid://d3ah1cxy5xllk" path="res://Sprites/Images/On Fire bubble anim.png" id="3_t3ube"]
-[ext_resource type="Texture2D" uid="uid://b33v58v2ryj8h" path="res://Sprites/Images/Background/TransitionScreen.png" id="4_ki4ts"]
+[ext_resource type="Texture2D" uid="uid://bd1dwrnlvsy3b" path="res://Sprites/Images/transition_background.png" id="4_aajow"]
 [ext_resource type="AudioStream" uid="uid://ddmwq43hjrvvd" path="res://Sounds/The_Building_Is_On_Fire_SFX.wav" id="4_us28v"]
 [ext_resource type="FontFile" uid="uid://dbdv0matl6f8m" path="res://Sprites/Fonty/I-pixel-u.ttf" id="7_mtmyx"]
 [ext_resource type="SpriteFrames" uid="uid://wxv3x02mnh14" path="res://Sprites/Images/Objects/senior.tres" id="8_ukeh7"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cbkelsl8hm33d" path="res://Sprites/Images/Objects/Fire extinguisher.png" id="12_w81bu"]
 [ext_resource type="SpriteFrames" uid="uid://cdhif0v436ufv" path="res://Sprites/Images/Objects/FireExtinguisher.tres" id="13_wq4f7"]
 [ext_resource type="SpriteFrames" uid="uid://cmgcuv3wi5nhp" path="res://Sprites/brick.tres" id="14_e018t"]
+[ext_resource type="PackedScene" uid="uid://c4wayj2esb4on" path="res://Scenes/player1.tscn" id="15_yjgai"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_upi35"]
 atlas = ExtResource("3_t3ube")
@@ -93,7 +94,7 @@ texture = ExtResource("2_okj7l")
 
 [node name="TransitionScreen" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
-texture = ExtResource("4_ki4ts")
+texture = ExtResource("4_aajow")
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="."]
 offset_left = 812.0
@@ -183,3 +184,6 @@ theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("7_mtmyx")
 theme_override_font_sizes/normal_font_size = 40
 text = "PRESS SPACE"
+
+[node name="Player" parent="." instance=ExtResource("15_yjgai")]
+position = Vector2(433, 536)
