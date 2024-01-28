@@ -26,8 +26,10 @@ func _on_quit_pressed():
 
 
 func _on_settings_pressed():
-	#get_tree().change_scene_to_file("res://Scenes/Menus/Settings.tscn")
-	pass
+	if $VBoxContainer/Settings/credits.visible == true:
+		$VBoxContainer/Settings/credits.hide()
+	else:
+		$VBoxContainer/Settings/credits.show()
 
 
 func _on_start_game_focus_entered():
