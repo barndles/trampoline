@@ -43,7 +43,7 @@ func _process(delta):
 	
 	#baby landing (badly)
 	#if(fallingObject)
-
+	if fallingObject.z_index != 0: queue_free()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	if (fallingObject.linear_velocity.y > 0):
