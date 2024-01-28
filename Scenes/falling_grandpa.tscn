@@ -1,0 +1,111 @@
+[gd_scene load_steps=18 format=3 uid="uid://rmqqwsdtkfjp"]
+
+[ext_resource type="Script" path="res://Scripts/falling_object.gd" id="1_0dt5s"]
+[ext_resource type="Texture2D" uid="uid://disxa0lqis4n0" path="res://Sprites/Images/throwingObjects/Senior citizen crash.png" id="1_51vcw"]
+[ext_resource type="Texture2D" uid="uid://j51omqax8jrq" path="res://Sprites/Images/throwingObjects/Senior citizen.png" id="2_j8i4n"]
+[ext_resource type="AudioStream" uid="uid://c2bly7rytx30i" path="res://Sounds/Floor_Smack_1.wav" id="3_fco43"]
+[ext_resource type="AudioStream" uid="uid://dkhuh83oj88di" path="res://Sounds/Sheet_Bounce_1.wav" id="4_15he8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dd8wn"]
+atlas = ExtResource("1_51vcw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcyjj"]
+atlas = ExtResource("1_51vcw")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1sfe"]
+atlas = ExtResource("1_51vcw")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hosi"]
+atlas = ExtResource("1_51vcw")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vd13o"]
+atlas = ExtResource("1_51vcw")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pl7lk"]
+atlas = ExtResource("1_51vcw")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbkjv"]
+atlas = ExtResource("1_51vcw")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31db6"]
+atlas = ExtResource("1_51vcw")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gsnb1"]
+atlas = ExtResource("2_j8i4n")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g40r1"]
+atlas = ExtResource("2_j8i4n")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1n8nk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dd8wn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcyjj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1sfe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hosi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vd13o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pl7lk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fbkjv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31db6")
+}],
+"loop": true,
+"name": &"Crash",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gsnb1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g40r1")
+}],
+"loop": true,
+"name": &"Falling",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rl8kt"]
+
+[node name="FallingGrandpa" type="RigidBody2D"]
+script = ExtResource("1_0dt5s")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_1n8nk")
+animation = &"Crash"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_rl8kt")
+
+[node name="Smack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_fco43")
+
+[node name="Boing" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_15he8")
+volume_db = 2.6
