@@ -1,6 +1,8 @@
 extends Node
 
 @onready var resetTime = 0
+@onready var last_spawn = 0
+
 var obj_good = [preload("res://Scenes/falling_object.tscn"), preload("res://Scenes/Falling_Grandpa.tscn")]
 var obj_bad = [preload("res://Scenes/Falling_Bricks.tscn"), preload("res://Scenes/Fire_extinguisher.tscn")]
 var help_bubble = preload("res://Scenes/help_bubble.tscn")
@@ -11,6 +13,9 @@ func _ready():
 
 func wait_seconds_to_spawn():
 	var rng_location = randi_range(0,5)
+	while(rng_location == last_spawn):
+		rng_location = randi_range(0,5)
+	last_spawn = rng_location
 	var rng_timer = randf_range(3.0,8.0)
 	#
 	inst_bubble(spawn_points[rng_location] - Vector2(50,20), rng_timer)

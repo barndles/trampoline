@@ -58,12 +58,14 @@ func _physics_process(delta):
 		if (fallingObject.position.x > player1.global_position.x) and (fallingObject.position.x < player2.global_position.x):
 			canBounce = true
 		else: canBounce = false
-	if (bouncing == true and canBounce == false):
-		$Boing.play()
+	if (bouncing == true) and (canBounce == false):
+		#$Boing.play()
+		print("guhguhgughu")
 		
 
 	#TEMPORARY SCENE RELOAD - DEBUGGING ONLY - SPACEBAR
 	if Input.is_action_just_pressed("ui_accept"):
+		global.lives = 5
 		get_tree().reload_current_scene()
 
 

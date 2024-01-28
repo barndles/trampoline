@@ -34,7 +34,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="OldHome" type="Node2D"]
+[node name="TacoTech" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)

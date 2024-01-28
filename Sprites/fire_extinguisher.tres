@@ -51,6 +51,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_eqru6")
+}, {
+"duration": 1.0,
+"texture": null
 }],
 "loop": false,
 "name": &"Crash",

@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://bu8g1eahap64k"]
 
 [ext_resource type="Script" path="res://Scripts/building_scripts/building_builder.gd" id="1_dmg20"]
-[ext_resource type="Texture2D" uid="uid://cbph62beotpck" path="res://Sprites/Images/Background/building_base.PNG" id="2_i6mw4"]
-[ext_resource type="Texture2D" uid="uid://bwu7bckcr81is" path="res://Sprites/Images/Background/Fire.png" id="3_2vlwv"]
+[ext_resource type="Texture2D" uid="uid://cbph62beotpck" path="res://Sprites/Images/building_base.PNG" id="2_i6mw4"]
+[ext_resource type="Texture2D" uid="uid://bwu7bckcr81is" path="res://Sprites/Images/Fire.png" id="3_2vlwv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jaylc"]
 atlas = ExtResource("3_2vlwv")
