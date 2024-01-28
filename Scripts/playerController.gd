@@ -3,6 +3,7 @@ extends Node2D
 @onready var player1 = $player1
 @onready var player2 = $player2
 
+@onready var global = get_node("/root/Autoload")
 @onready var animated_player1 = $player1/Sprite2D
 @onready var animated_player2 = $player2/Sprite2D
 

@@ -2,6 +2,7 @@ extends Node
 
 @onready var resetTime = 0
 @onready var last_spawn = 0
+@onready var global = get_node("/root/Autoload")
 
 var obj_good = [preload("res://Scenes/falling_object.tscn"), preload("res://Scenes/Falling_Grandpa.tscn"),preload("res://Scenes/Falling_Cat.tscn")]
 var obj_bad = [preload("res://Scenes/Falling_Bricks.tscn"), preload("res://Scenes/Fire_extinguisher.tscn")]
@@ -28,6 +29,7 @@ func inst(pos):
 	var instance = object_select().instantiate();
 	instance.position = pos
 	add_child(instance)
+	global.countdown -= 1
 
 func object_select():
 	var rng_randomization = randi_range(1,5)
