@@ -1,7 +1,7 @@
 [gd_resource type="SpriteFrames" load_steps=15 format=3 uid="uid://6dwd72sedqj4"]
 
-[ext_resource type="Texture2D" uid="uid://cjnkisoqyaynl" path="res://Sprites/Images/Objects/Baby_falling.png" id="1_r7ixe"]
-[ext_resource type="Texture2D" uid="uid://dbcv8xe3jh28r" path="res://Sprites/Images/Objects/Baby_crash.png" id="1_y764n"]
+[ext_resource type="Texture2D" uid="uid://cjnkisoqyaynl" path="res://Sprites/Images/Baby_falling.png" id="1_r7ixe"]
+[ext_resource type="Texture2D" uid="uid://dbcv8xe3jh28r" path="res://Sprites/Images/Baby_crash.png" id="1_y764n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5lgsy"]
 atlas = ExtResource("1_y764n")
