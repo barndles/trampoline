@@ -64,5 +64,5 @@ sprite_frames = SubResource("SpriteFrames_vhd2a")
 autoplay = "default"
 
 [node name="OrphanageSign" type="Sprite2D" parent="."]
-position = Vector2(-250, -65)
+position = Vector2(0, -102)
 texture = ExtResource("4_5ghr1")

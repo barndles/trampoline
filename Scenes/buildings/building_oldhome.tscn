@@ -62,5 +62,5 @@ sprite_frames = SubResource("SpriteFrames_j7nyd")
 autoplay = "default"
 
 [node name="OldFolksSign" type="Sprite2D" parent="."]
-position = Vector2(-263, -62)
+position = Vector2(0, -97)
 texture = ExtResource("3_bg1cg")
