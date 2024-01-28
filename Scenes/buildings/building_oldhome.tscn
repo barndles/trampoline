@@ -1,23 +1,21 @@
-[gd_scene load_steps=9 format=3 uid="uid://bcv4vploituyn"]
+[gd_scene load_steps=7 format=3 uid="uid://bcv4vploituyn"]
 
-[ext_resource type="Texture2D" uid="uid://dv5vwebe2bhb8" path="res://Sprites/Images/building_f1_alt.PNG" id="1_3wx4g"]
-[ext_resource type="Texture2D" uid="uid://bwu7bckcr81is" path="res://Sprites/Images/Fire.png" id="2_yp3hl"]
-[ext_resource type="Texture2D" uid="uid://lygds5yn7q2m" path="res://Sprites/Images/Signs/OldFolks_Sign.PNG" id="3_bg1cg"]
-[ext_resource type="PackedScene" uid="uid://cpi22ailrsc1c" path="res://Window.tscn" id="4_ktvao"]
+[ext_resource type="Texture2D" uid="uid://dv5vwebe2bhb8" path="res://Sprites/Images/Background/building_f1_alt.PNG" id="1_wwn34"]
+[ext_resource type="Texture2D" uid="uid://bwu7bckcr81is" path="res://Sprites/Images/Background/Fire.png" id="2_q54fq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jaylc"]
-atlas = ExtResource("2_yp3hl")
+atlas = ExtResource("2_q54fq")
 region = Rect2(0, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iriwq"]
-atlas = ExtResource("2_yp3hl")
+atlas = ExtResource("2_q54fq")
 region = Rect2(32, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3gjkk"]
-atlas = ExtResource("2_yp3hl")
+atlas = ExtResource("2_q54fq")
 region = Rect2(64, 0, 32, 48)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_bj33h"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_j7nyd"]
 resource_local_to_scene = true
 animations = [{
 "frames": [{
@@ -39,43 +37,28 @@ animations = [{
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
-texture = ExtResource("1_3wx4g")
+texture = ExtResource("1_wwn34")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="Fire_Left" type="AnimatedSprite2D" parent="."]
+position = Vector2(-127, 7)
+scale = Vector2(1.71875, 1.71875)
+sprite_frames = SubResource("SpriteFrames_j7nyd")
+autoplay = "default"
+
+[node name="Fire_Left2" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.999985, 7)
+scale = Vector2(1.71875, 1.71875)
+sprite_frames = SubResource("SpriteFrames_j7nyd")
+autoplay = "default"
+
+[node name="Fire_Left3" type="AnimatedSprite2D" parent="."]
+position = Vector2(130, 7)
+scale = Vector2(1.71875, 1.71875)
+sprite_frames = SubResource("SpriteFrames_j7nyd")
+autoplay = "default"
 
 [node name="OldFolksSign" type="Sprite2D" parent="."]
 position = Vector2(0, -97)
-texture = ExtResource("3_bg1cg")
-
-[node name="Fires" type="Node2D" parent="."]
-position = Vector2(-127, 0)
-
-[node name="Fire_Left" type="AnimatedSprite2D" parent="Fires"]
-position = Vector2(0, 7)
-scale = Vector2(1.71875, 1.71875)
-sprite_frames = SubResource("SpriteFrames_bj33h")
-autoplay = "default"
-
-[node name="Area2D" parent="Fires" instance=ExtResource("4_ktvao")]
-collision_mask = 5
-
-[node name="Fires_Center" type="Node2D" parent="."]
-
-[node name="Fire_Left" type="AnimatedSprite2D" parent="Fires_Center"]
-position = Vector2(0, 7)
-scale = Vector2(1.71875, 1.71875)
-sprite_frames = SubResource("SpriteFrames_bj33h")
-autoplay = "default"
-
-[node name="Area2D2" parent="Fires_Center" instance=ExtResource("4_ktvao")]
-collision_mask = 5
-
-[node name="Fires_Right" type="Node2D" parent="."]
-position = Vector2(127, 0)
-
-[node name="Fire_Left" type="AnimatedSprite2D" parent="Fires_Right"]
-position = Vector2(0, 7)
-scale = Vector2(1.71875, 1.71875)
-sprite_frames = SubResource("SpriteFrames_bj33h")
-autoplay = "default"
-
-[node name="Area2D2" parent="Fires_Right" instance=ExtResource("4_ktvao")]
-collision_mask = 5

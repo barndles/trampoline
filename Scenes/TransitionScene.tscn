@@ -1,19 +1,19 @@
 [gd_scene load_steps=27 format=3 uid="uid://dn5ec634nxbvn"]
 
 [ext_resource type="Script" path="res://Scenes/TransitionScene.gd" id="1_iu16w"]
-[ext_resource type="Texture2D" uid="uid://bc6dnn3dtvcs6" path="res://Sprites/Images/skyline.png" id="1_odt6e"]
-[ext_resource type="Texture2D" uid="uid://crabfn3waud" path="res://Sprites/Images/Street.png" id="2_okj7l"]
-[ext_resource type="Texture2D" uid="uid://d3ah1cxy5xllk" path="res://Sprites/Images/On Fire bubble anim.png" id="3_t3ube"]
+[ext_resource type="Texture2D" uid="uid://bc6dnn3dtvcs6" path="res://Sprites/Images/Background/skyline.png" id="1_odt6e"]
+[ext_resource type="Texture2D" uid="uid://crabfn3waud" path="res://Sprites/Images/Background/Street.png" id="2_okj7l"]
+[ext_resource type="Texture2D" uid="uid://d3ah1cxy5xllk" path="res://Sprites/Images/Background/On Fire bubble anim.png" id="3_t3ube"]
 [ext_resource type="AudioStream" uid="uid://ddmwq43hjrvvd" path="res://Sounds/The_Building_Is_On_Fire_SFX.wav" id="4_us28v"]
-[ext_resource type="Texture2D" uid="uid://cgwhxd6wyt8v8" path="res://Sprites/Images/Rescue vehicle.png" id="5_0f7pr"]
+[ext_resource type="Texture2D" uid="uid://cgwhxd6wyt8v8" path="res://Sprites/Images/Background/Rescue vehicle.png" id="5_0f7pr"]
 [ext_resource type="FontFile" uid="uid://dbdv0matl6f8m" path="res://Sprites/Fonty/I-pixel-u.ttf" id="7_mtmyx"]
-[ext_resource type="Texture2D" uid="uid://cjnkisoqyaynl" path="res://Sprites/Images/Objects/Baby_falling.png" id="8_36pk2"]
-[ext_resource type="Texture2D" uid="uid://d3v441s7sd3sv" path="res://Sprites/Images/Objects/Senior citizen.png" id="9_ve4o8"]
-[ext_resource type="Texture2D" uid="uid://dquwpxrpemkxs" path="res://Sprites/Images/Objects/hamster.png" id="10_cx01w"]
-[ext_resource type="Texture2D" uid="uid://crlep5rj8a5qq" path="res://Sprites/Images/Objects/cat.png" id="11_f5u7a"]
+[ext_resource type="SpriteFrames" uid="uid://wxv3x02mnh14" path="res://Sprites/Images/Objects/senior.tres" id="8_ukeh7"]
+[ext_resource type="SpriteFrames" uid="uid://6dwd72sedqj4" path="res://Sprites/Baby.tres" id="9_xk0aj"]
+[ext_resource type="SpriteFrames" uid="uid://b3oqodddpobac" path="res://Sprites/Images/Objects/hamster.tres" id="10_ny00l"]
+[ext_resource type="SpriteFrames" uid="uid://301ajbvsdvvo" path="res://Sprites/Images/Objects/cat.tres" id="11_kvni4"]
 [ext_resource type="Texture2D" uid="uid://cbkelsl8hm33d" path="res://Sprites/Images/Objects/Fire extinguisher.png" id="12_w81bu"]
-[ext_resource type="Texture2D" uid="uid://d1n1itvpgijqo" path="res://Sprites/Images/Objects/Molotov cocktail.png" id="13_2u2o2"]
-[ext_resource type="Texture2D" uid="uid://2lpen6hee3hr" path="res://Sprites/Images/Objects/brick.png" id="14_4383s"]
+[ext_resource type="SpriteFrames" uid="uid://cdhif0v436ufv" path="res://Sprites/Images/Objects/FireExtinguisher.tres" id="13_wq4f7"]
+[ext_resource type="SpriteFrames" uid="uid://cmgcuv3wi5nhp" path="res://Sprites/brick.tres" id="14_e018t"]
 [ext_resource type="AudioStream" uid="uid://bovrtpgow4e67" path="res://Sounds/Jokes/Joke_1.wav" id="15_0dgtu"]
 [ext_resource type="AudioStream" uid="uid://b3m6fh14o8i72" path="res://Sounds/Jokes/Joke_2A.wav" id="16_dxyjb"]
 [ext_resource type="AudioStream" uid="uid://cgndddyuhsc0n" path="res://Sounds/Jokes/Joke_2B.wav" id="17_p1la6"]
@@ -100,8 +100,8 @@ scale = Vector2(3, 3)
 texture = ExtResource("2_okj7l")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(930.906, 289.5)
-scale = Vector2(1.71875, 1.71875)
+position = Vector2(942, 253)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_1sr52")
 autoplay = "default"
 
@@ -147,25 +147,26 @@ theme_override_fonts/normal_font = ExtResource("7_mtmyx")
 theme_override_font_sizes/normal_font_size = 40
 text = "\"Victims\""
 
-[node name="Sprite2D" type="Sprite2D" parent="RichTextLabel2"]
-position = Vector2(80, 154)
-scale = Vector2(3.75, 3.75)
-texture = ExtResource("8_36pk2")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="RichTextLabel2"]
+position = Vector2(81, 140)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("8_ukeh7")
 
-[node name="Sprite2D2" type="Sprite2D" parent="RichTextLabel2"]
-position = Vector2(78, 85)
-scale = Vector2(2.375, 2.375)
-texture = ExtResource("9_ve4o8")
+[node name="Sprite2D2" type="AnimatedSprite2D" parent="RichTextLabel2"]
+position = Vector2(86, 74)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("9_xk0aj")
+animation = &"Falling"
 
-[node name="Sprite2D3" type="Sprite2D" parent="RichTextLabel2"]
-position = Vector2(78, 230)
-scale = Vector2(2.625, 2.625)
-texture = ExtResource("10_cx01w")
+[node name="Sprite2D4" type="AnimatedSprite2D" parent="RichTextLabel2"]
+position = Vector2(108, 224)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("10_ny00l")
 
-[node name="Sprite2D4" type="Sprite2D" parent="RichTextLabel2"]
-position = Vector2(82, 301)
-scale = Vector2(1.875, 1.875)
-texture = ExtResource("11_f5u7a")
+[node name="Sprite2D3" type="AnimatedSprite2D" parent="RichTextLabel2"]
+position = Vector2(54, 226)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("11_kvni4")
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="."]
 offset_left = 634.0
@@ -183,15 +184,17 @@ position = Vector2(72, 89)
 scale = Vector2(4.1875, 4.1875)
 texture = ExtResource("12_w81bu")
 
-[node name="Sprite2D2" type="Sprite2D" parent="RichTextLabel3"]
-position = Vector2(71, 148)
-scale = Vector2(2.875, 2.875)
-texture = ExtResource("13_2u2o2")
+[node name="Sprite2D2" type="AnimatedSprite2D" parent="RichTextLabel3"]
+position = Vector2(72, 154)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("13_wq4f7")
+animation = &"Falling"
 
-[node name="Sprite2D3" type="Sprite2D" parent="RichTextLabel3"]
-position = Vector2(72, 194)
-scale = Vector2(1.75, 1.75)
-texture = ExtResource("14_4383s")
+[node name="Sprite2D3" type="AnimatedSprite2D" parent="RichTextLabel3"]
+position = Vector2(78, 202)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("14_e018t")
+animation = &"Crash"
 
 [node name="Node" type="Node" parent="."]
 

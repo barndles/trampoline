@@ -1,45 +1,123 @@
-[gd_scene load_steps=7 format=3 uid="uid://7760ckbmvk33"]
+[gd_scene load_steps=18 format=3 uid="uid://7760ckbmvk33"]
 
-[ext_resource type="Script" path="res://Scripts/falling_object.gd" id="1_t5hf7"]
-[ext_resource type="SpriteFrames" uid="uid://dhn4vmmiiacsv" path="res://Sprites/Images/falling_grandpa.tres" id="2_xmypg"]
-[ext_resource type="AudioStream" uid="uid://c2bly7rytx30i" path="res://Sounds/Floor_Smack_1.wav" id="3_5mk6a"]
-[ext_resource type="AudioStream" uid="uid://dkhuh83oj88di" path="res://Sounds/Sheet_Bounce_1.wav" id="4_tllag"]
+[ext_resource type="Script" path="res://Scripts/falling_object.gd" id="1_0dt5s"]
+[ext_resource type="Texture2D" uid="uid://disxa0lqis4n0" path="res://Sprites/Images/throwingObjects/Senior citizen crash.png" id="2_pg7u3"]
+[ext_resource type="Texture2D" uid="uid://j51omqax8jrq" path="res://Sprites/Images/throwingObjects/Senior citizen.png" id="3_0k7gg"]
+[ext_resource type="AudioStream" uid="uid://c2bly7rytx30i" path="res://Sounds/Floor_Smack_1.wav" id="3_fco43"]
+[ext_resource type="AudioStream" uid="uid://dkhuh83oj88di" path="res://Sounds/Sheet_Bounce_1.wav" id="4_15he8"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_isqrd"]
-size = Vector2(48, 45.5)
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvoxy"]
+atlas = ExtResource("2_pg7u3")
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3rmh1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrhxv"]
+atlas = ExtResource("2_pg7u3")
+region = Rect2(32, 0, 32, 32)
 
-[node name="FallingObject" type="RigidBody2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lnhh"]
+atlas = ExtResource("2_pg7u3")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mw8eo"]
+atlas = ExtResource("2_pg7u3")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2s0l"]
+atlas = ExtResource("2_pg7u3")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tbpa"]
+atlas = ExtResource("2_pg7u3")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_le01g"]
+atlas = ExtResource("2_pg7u3")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2b16"]
+atlas = ExtResource("2_pg7u3")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xixj8"]
+atlas = ExtResource("3_0k7gg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y14vp"]
+atlas = ExtResource("3_0k7gg")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1n8nk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvoxy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xrhxv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0lnhh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mw8eo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2s0l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4tbpa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_le01g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2b16")
+}],
+"loop": false,
+"name": &"Crash",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xixj8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y14vp")
+}],
+"loop": true,
+"name": &"Falling",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rl8kt"]
+size = Vector2(34.8, 38.4)
+
+[node name="FallingGrandpa" type="RigidBody2D"]
 collision_layer = 2
 collision_mask = 8
 lock_rotation = true
-continuous_cd = 2
+continuous_cd = 1
 max_contacts_reported = 5
 contact_monitor = true
-script = ExtResource("1_t5hf7")
+script = ExtResource("1_0dt5s")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(3, 3)
-sprite_frames = ExtResource("2_xmypg")
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_1n8nk")
 animation = &"Crash"
+frame = 7
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1.25)
-shape = SubResource("RectangleShape2D_isqrd")
+position = Vector2(1.5, -9.53674e-07)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_rl8kt")
 
 [node name="Smack" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_5mk6a")
+stream = ExtResource("3_fco43")
 
 [node name="Boing" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_tllag")
+stream = ExtResource("4_15he8")
 volume_db = 2.6
-
-[node name="Area2D" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_3rmh1")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

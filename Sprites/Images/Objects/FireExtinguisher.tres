@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://cdhif0v436ufv"]
+
+[ext_resource type="Texture2D" path="res://Sprites/Images/Molotov cocktail.png" id="1_k0hmv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dxqa"]
+atlas = ExtResource("1_k0hmv")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58wmb"]
+atlas = ExtResource("1_k0hmv")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8smx"]
+atlas = ExtResource("1_k0hmv")
+region = Rect2(32, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dxqa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58wmb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8smx")
+}],
+"loop": true,
+"name": &"Falling",
+"speed": 5.0
+}]

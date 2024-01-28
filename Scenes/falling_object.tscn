@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://0mchb1mnuemn"]
+[gd_scene load_steps=6 format=3 uid="uid://0mchb1mnuemn"]
 
 [ext_resource type="Script" path="res://Scripts/falling_object.gd" id="1_oxqbh"]
 [ext_resource type="SpriteFrames" uid="uid://6dwd72sedqj4" path="res://Sprites/Baby.tres" id="2_y6bm0"]
@@ -8,9 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_isqrd"]
 size = Vector2(48, 45.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w4bo8"]
-
-[node name="FallingObject" type="RigidBody2D"]
+[node name="FallingObject2" type="RigidBody2D"]
 collision_layer = 2
 collision_mask = 8
 lock_rotation = true
@@ -34,12 +32,5 @@ stream = ExtResource("3_ooe1e")
 [node name="Boing" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_smksa")
 volume_db = 2.6
-
-[node name="Area2D" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_w4bo8")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
