@@ -1,19 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://d2ads04j5044"]
+[gd_scene load_steps=7 format=3 uid="uid://d2ads04j5044"]
 
-[ext_resource type="Texture2D" uid="uid://dv5vwebe2bhb8" path="res://Sprites/Images/building_f1_alt.PNG" id="2_04dbx"]
-[ext_resource type="Texture2D" uid="uid://bwu7bckcr81is" path="res://Sprites/Images/Fire.png" id="3_4ea0y"]
-[ext_resource type="Texture2D" uid="uid://b4xpv46reu7fr" path="res://Sprites/Images/Signs/Orphanage_sign.PNG" id="4_5ghr1"]
+[ext_resource type="Texture2D" uid="uid://dv5vwebe2bhb8" path="res://Sprites/Images/Background/building_f1_alt.PNG" id="1_ercl7"]
+[ext_resource type="Texture2D" uid="uid://bwu7bckcr81is" path="res://Sprites/Images/Background/Fire.png" id="2_1bxx8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jaylc"]
-atlas = ExtResource("3_4ea0y")
+atlas = ExtResource("2_1bxx8")
 region = Rect2(0, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iriwq"]
-atlas = ExtResource("3_4ea0y")
+atlas = ExtResource("2_1bxx8")
 region = Rect2(32, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3gjkk"]
-atlas = ExtResource("3_4ea0y")
+atlas = ExtResource("2_1bxx8")
 region = Rect2(64, 0, 32, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vhd2a"]
@@ -38,7 +37,7 @@ animations = [{
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
-texture = ExtResource("2_04dbx")
+texture = ExtResource("1_ercl7")
 
 [node name="Fire_Left" type="AnimatedSprite2D" parent="."]
 position = Vector2(-127, 7)
@@ -60,4 +59,3 @@ autoplay = "default"
 
 [node name="OrphanageSign" type="Sprite2D" parent="."]
 position = Vector2(0, -102)
-texture = ExtResource("4_5ghr1")
