@@ -1,0 +1,98 @@
+[gd_scene load_steps=10 format=3 uid="uid://craq5ct3x5a6j"]
+
+[ext_resource type="Script" path="res://Scenes/FirstScene.gd" id="1_xd03g"]
+[ext_resource type="Texture2D" uid="uid://bc6dnn3dtvcs6" path="res://Sprites/Images/skyline.png" id="2_tek16"]
+[ext_resource type="Texture2D" uid="uid://crabfn3waud" path="res://Sprites/Images/Street.png" id="3_yqu6x"]
+[ext_resource type="Texture2D" uid="uid://d3ah1cxy5xllk" path="res://Sprites/Images/On Fire bubble anim.png" id="4_bqlm2"]
+[ext_resource type="AudioStream" uid="uid://ddmwq43hjrvvd" path="res://Sounds/The_Building_Is_On_Fire_SFX.wav" id="5_6j60i"]
+[ext_resource type="Texture2D" uid="uid://cgwhxd6wyt8v8" path="res://Sprites/Images/Rescue vehicle.png" id="6_f2urt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_upi35"]
+atlas = ExtResource("4_bqlm2")
+region = Rect2(0, 0, 42, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjegr"]
+atlas = ExtResource("4_bqlm2")
+region = Rect2(42, 0, 42, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1sr52"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_upi35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjegr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="TransitionScene" type="Node2D"]
+script = ExtResource("1_xd03g")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(12, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(260, 257)
+texture = ExtResource("2_tek16")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(716, 257)
+texture = ExtResource("2_tek16")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1176, 257)
+texture = ExtResource("2_tek16")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(97, 535)
+scale = Vector2(3, 3)
+texture = ExtResource("3_yqu6x")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(288, 535)
+scale = Vector2(3, 3)
+texture = ExtResource("3_yqu6x")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(480, 535)
+scale = Vector2(3, 3)
+texture = ExtResource("3_yqu6x")
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(671, 535)
+scale = Vector2(3, 3)
+texture = ExtResource("3_yqu6x")
+
+[node name="Sprite2D5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(863, 535)
+scale = Vector2(3, 3)
+texture = ExtResource("3_yqu6x")
+
+[node name="Sprite2D6" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(1054, 535)
+scale = Vector2(3, 3)
+texture = ExtResource("3_yqu6x")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(930.906, 289.5)
+scale = Vector2(1.71875, 1.71875)
+sprite_frames = SubResource("SpriteFrames_1sr52")
+autoplay = "default"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sprite2D"]
+stream = ExtResource("5_6j60i")
+autoplay = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(79, 479)
+scale = Vector2(2.45313, 2.45313)
+texture = ExtResource("6_f2urt")
