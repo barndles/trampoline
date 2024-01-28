@@ -1,0 +1,58 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://btk2wrlex2sv0"]
+
+[ext_resource type="Texture2D" uid="uid://d3awuvp7q4n4e" path="res://Sprites/Images/TV.png" id="1_88jfw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hyryj"]
+atlas = ExtResource("1_88jfw")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tc8oa"]
+atlas = ExtResource("1_88jfw")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p81rx"]
+atlas = ExtResource("1_88jfw")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2wnj"]
+atlas = ExtResource("1_88jfw")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qnuu"]
+atlas = ExtResource("1_88jfw")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oo1jo"]
+atlas = ExtResource("1_88jfw")
+region = Rect2(0, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hyryj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tc8oa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p81rx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2wnj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qnuu")
+}],
+"loop": false,
+"name": &"Crash",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oo1jo")
+}],
+"loop": false,
+"name": &"Falling",
+"speed": 5.0
+}]
