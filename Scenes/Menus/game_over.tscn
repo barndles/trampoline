@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://brmi7yqy6hjie"]
+[gd_scene load_steps=7 format=3 uid="uid://brmi7yqy6hjie"]
 
-[ext_resource type="Texture2D" uid="uid://uqbu5i44bri8" path="res://Sprites/Images/GameOverScreenBG.png" id="1_2u1go"]
+[ext_resource type="Texture2D" uid="uid://uqbu5i44bri8" path="res://Sprites/Images/Background/GameOverScreenBG.png" id="1_2u1go"]
 [ext_resource type="Script" path="res://Scenes/Menus/game_over.gd" id="1_vkenx"]
 [ext_resource type="AudioStream" uid="uid://dqvljxp8lfgg3" path="res://Sounds/Game_Over.wav" id="2_vs778"]
 [ext_resource type="FontFile" uid="uid://dbdv0matl6f8m" path="res://Sprites/Fonty/I-pixel-u.ttf" id="3_gbeax"]
-[ext_resource type="Texture2D" uid="uid://dfjh48cyc1gwc" path="res://Sprites/Images/Red Cross.png" id="5_i4oim"]
+[ext_resource type="Texture2D" uid="uid://n5hmpdf4xkoo" path="res://Sprites/Images/UI/GAME_OVER_title.png" id="4_2dba2"]
+[ext_resource type="Texture2D" uid="uid://dfjh48cyc1gwc" path="res://Sprites/Images/Background/Red Cross.png" id="5_i4oim"]
 
 [node name="Game Over" type="Control"]
 layout_mode = 3
@@ -24,21 +25,9 @@ texture = ExtResource("1_2u1go")
 stream = ExtResource("2_vs778")
 autoplay = true
 
-[node name="Game over" type="RichTextLabel" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -162.0
-offset_top = 87.0
-offset_right = 169.0
-offset_bottom = 153.0
-grow_horizontal = 2
-theme_override_colors/default_color = Color(1, 0.988235, 0.988235, 1)
-theme_override_fonts/normal_font = ExtResource("3_gbeax")
-theme_override_font_sizes/normal_font_size = 50
-bbcode_enabled = true
-text = "[wave amp=50 freq=2]GAME OVER[/wave]"
+[node name="Game over" type="Sprite2D" parent="."]
+position = Vector2(575, 116)
+texture = ExtResource("4_2dba2")
 
 [node name="hater" type="RichTextLabel" parent="."]
 layout_mode = 1
@@ -112,6 +101,17 @@ visible = false
 position = Vector2(102, 30)
 scale = Vector2(3.375, 3.375)
 texture = ExtResource("5_i4oim")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 397.0
+offset_top = 201.0
+offset_right = 800.0
+offset_bottom = 248.0
+theme_override_fonts/normal_font = ExtResource("3_gbeax")
+theme_override_font_sizes/normal_font_size = 35
+text = "SCORE: 0000000
+"
 
 [connection signal="focus_entered" from="VBoxContainer/Restart" to="." method="_on_restart_focus_entered"]
 [connection signal="focus_exited" from="VBoxContainer/Restart" to="." method="_on_restart_focus_exited"]
