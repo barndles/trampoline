@@ -37,7 +37,7 @@ alignment = 1
 
 [node name="Start Game" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_d5iy1")
 theme_override_font_sizes/font_size = 30
 text = "START GAME"
@@ -51,7 +51,7 @@ texture = ExtResource("7_ygqiu")
 
 [node name="Settings" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_d5iy1")
 theme_override_font_sizes/font_size = 30
 text = "CREDITS"
@@ -100,7 +100,7 @@ TULSA UNIVERSITY"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_d5iy1")
 theme_override_font_sizes/font_size = 30
 text = "QUIT"
