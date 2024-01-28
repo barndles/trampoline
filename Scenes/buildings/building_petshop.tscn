@@ -1,19 +1,19 @@
-[gd_scene load_steps=8 format=3 uid="uid://bcv4vploituyn"]
+[gd_scene load_steps=8 format=3 uid="uid://dcbd52xa2lok"]
 
-[ext_resource type="Texture2D" uid="uid://dv5vwebe2bhb8" path="res://Sprites/Images/building_f1_alt.PNG" id="1_3wx4g"]
-[ext_resource type="Texture2D" uid="uid://bwu7bckcr81is" path="res://Sprites/Images/Fire.png" id="2_yp3hl"]
-[ext_resource type="Texture2D" uid="uid://lygds5yn7q2m" path="res://Sprites/Images/Signs/OldFolks_Sign.PNG" id="3_bg1cg"]
+[ext_resource type="Texture2D" uid="uid://dv5vwebe2bhb8" path="res://Sprites/Images/building_f1_alt.PNG" id="1_gptkv"]
+[ext_resource type="Texture2D" uid="uid://bwu7bckcr81is" path="res://Sprites/Images/Fire.png" id="2_i8ykt"]
+[ext_resource type="Texture2D" path="res://Sprites/Images/Signs/sign-petshop.PNG" id="3_d143r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jaylc"]
-atlas = ExtResource("2_yp3hl")
+atlas = ExtResource("2_i8ykt")
 region = Rect2(0, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iriwq"]
-atlas = ExtResource("2_yp3hl")
+atlas = ExtResource("2_i8ykt")
 region = Rect2(32, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3gjkk"]
-atlas = ExtResource("2_yp3hl")
+atlas = ExtResource("2_i8ykt")
 region = Rect2(64, 0, 32, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_j7nyd"]
@@ -38,7 +38,7 @@ animations = [{
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
-texture = ExtResource("1_3wx4g")
+texture = ExtResource("1_gptkv")
 
 [node name="Fire_Left" type="AnimatedSprite2D" parent="."]
 position = Vector2(-127, 7)
@@ -58,6 +58,6 @@ scale = Vector2(1.71875, 1.71875)
 sprite_frames = SubResource("SpriteFrames_j7nyd")
 autoplay = "default"
 
-[node name="OldFolksSign" type="Sprite2D" parent="."]
+[node name="PetSign" type="Sprite2D" parent="."]
 position = Vector2(0, -97)
-texture = ExtResource("3_bg1cg")
+texture = ExtResource("3_d143r")
