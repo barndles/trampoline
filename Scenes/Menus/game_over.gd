@@ -7,8 +7,10 @@ func _ready():
 	update_score(global.score)
 	if global.score < 69:
 		$hater.show()
-	if global.score > 70:
+	if global.score > 70 and global.score < 8999:
 		$"Cool Guy".show()
+	if global.score > 9000:
+		$"What".show()
 	
 func update_score(score):
 	$"Score Label/Score".text = str(score)

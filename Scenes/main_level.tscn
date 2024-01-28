@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://cdd4crv7gyydl"]
+[gd_scene load_steps=20 format=3 uid="uid://cdd4crv7gyydl"]
 
 [ext_resource type="PackedScene" uid="uid://c4wayj2esb4on" path="res://Scenes/player1.tscn" id="1_3kmge"]
+[ext_resource type="Script" path="res://Scenes/main_level.gd" id="1_7h415"]
 [ext_resource type="PackedScene" uid="uid://bu8g1eahap64k" path="res://Scenes/buildings/building_base.tscn" id="1_r6bca"]
 [ext_resource type="Script" path="res://Scripts/itemspawner.gd" id="3_ofqxm"]
 [ext_resource type="AudioStream" uid="uid://bj72kqbdxoi1i" path="res://Sounds/K-9_CREW_GO.wav" id="4_fpnuq"]
@@ -26,6 +27,7 @@ size = Vector2(318, 142)
 size = Vector2(4181, 38)
 
 [node name="Main_Level" type="Node2D"]
+script = ExtResource("1_7h415")
 
 [node name="building_base" parent="." instance=ExtResource("1_r6bca")]
 position = Vector2(960.525, 468)
