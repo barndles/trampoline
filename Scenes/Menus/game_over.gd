@@ -29,6 +29,7 @@ func _on_quit_pressed():
 
 func _on_restart_focus_entered():
 	$VBoxContainer/Restart/StartCross.show()
+	$VBoxContainer/Select.play()
 
 
 func _on_restart_focus_exited():
@@ -37,6 +38,7 @@ func _on_restart_focus_exited():
 
 func _on_quit_focus_entered():
 	$VBoxContainer/Quit/quitCross.show()
+	$VBoxContainer/Select.play()
 
 
 func _on_quit_focus_exited():

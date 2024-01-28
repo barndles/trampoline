@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://disxa0lqis4n0" path="res://Sprites/Images/throwingObjects/Senior citizen crash.png" id="2_pg7u3"]
 [ext_resource type="Texture2D" uid="uid://j51omqax8jrq" path="res://Sprites/Images/throwingObjects/Senior citizen.png" id="3_0k7gg"]
 [ext_resource type="AudioStream" uid="uid://c2bly7rytx30i" path="res://Sounds/Floor_Smack_1.wav" id="3_fco43"]
-[ext_resource type="AudioStream" uid="uid://dkhuh83oj88di" path="res://Sounds/Sheet_Bounce_1.wav" id="4_15he8"]
+[ext_resource type="AudioStream" uid="uid://cgj3iwx3170um" path="res://Sounds/Old_man_yell_SFX.wav" id="5_tqrqu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kvoxy"]
 atlas = ExtResource("2_pg7u3")
@@ -117,7 +117,8 @@ shape = SubResource("RectangleShape2D_rl8kt")
 stream = ExtResource("3_fco43")
 
 [node name="Boing" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_15he8")
+stream = ExtResource("5_tqrqu")
 volume_db = 2.6
+autoplay = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -96,16 +96,20 @@ texture = ExtResource("7_ygqiu")
 
 [node name="Starting" type="AudioStreamPlayer" parent="VBoxContainer"]
 stream = ExtResource("2_awbx6")
+volume_db = 1.0
 
 [node name="Select" type="AudioStreamPlayer" parent="VBoxContainer"]
 stream = ExtResource("5_daimn")
+volume_db = 1.0
 
 [node name="MenuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_4bo8c")
+volume_db = -5.0
 autoplay = true
 
 [node name="K-9 KATCHERS_TITLE" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_scclo")
+volume_db = 2.0
 autoplay = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
