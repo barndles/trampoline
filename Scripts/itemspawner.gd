@@ -1,7 +1,8 @@
 extends Node
 
 @onready var resetTime = 0
-var thrown_object = [preload("res://Scenes/falling_object.tscn"),preload("res://Scenes/Falling_Bricks.tscn"), preload("res://Scenes/Falling_Grandpa.tscn"), preload("res://Scenes/Fire_extinguisher.tscn")]
+var obj_good = [preload("res://Scenes/falling_object.tscn"), preload("res://Scenes/Falling_Grandpa.tscn")]
+var obj_bad = [preload("res://Scenes/Falling_Bricks.tscn"), preload("res://Scenes/Fire_extinguisher.tscn")]
 var help_bubble = preload("res://Scenes/help_bubble.tscn")
 var spawn_points = [Vector2(831,307),Vector2(959,307),Vector2(1087,307),Vector2(831,130),Vector2(959,130),Vector2(1087,130)]
 # Called when the node enters the scene tree for the first time.
@@ -19,9 +20,16 @@ func wait_seconds_to_spawn():
 	wait_seconds_to_spawn()
 
 func inst(pos):
-	var instance = thrown_object[randi_range(0,3)].instantiate();
+	var instance = object_select().instantiate();
 	instance.position = pos
 	add_child(instance)
+
+func object_select():
+	var rng_randomization = randi_range(1,5)
+	if(rng_randomization % 2 == 1):
+		return obj_good[randi_range(0,1)]
+	if(rng_randomization % 2 == 0):
+		return obj_bad[randi_range(0,1)]
 
 func inst_bubble(pos, time):
 	var instance = help_bubble.instantiate();
