@@ -3,14 +3,9 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	update_score(global.score,global.countdown)
 	global.countdown = 6
 	musicPlayer()
-	
 
-func update_score(score,count):
-	$Points.text = str(score)
-	$"Objects Left".text = str(count)
 func _input(event):	
 	if event.is_action_pressed("skip"):
 		global.countdown -= 1
